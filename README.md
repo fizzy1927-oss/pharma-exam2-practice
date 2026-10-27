@@ -8,8 +8,8 @@ A single-page study site for Respiratory Care Pharmacology:
 
 ## Features
 - **Guide** — exam study guide organized by the 13 learning objectives (tables, exam traps, memory hooks, high-yield facts), with a *Practice this* button per objective and a print-friendly layout.
-- **Quiz** — 204 questions: lecture-slide questions, your review-quiz and chapter-review questions (answers + explanations), and extra practice built from those topics (mucus physiology, bland aerosols, expectorants/antitussives, surfactant). Filter by question set, topic or learning objective; Practice mode (instant feedback) or Exam mode (score at the end, per-objective breakdown, review of misses). Missed questions are remembered for a "missed only" retake.
-- **Cases** — 19 multi-part patient scenarios: the 10 worksheet cases (each ends with a model *Indicated Medication / Rationale* answer, with optional boxes to write yours first) plus 9 extra practice cases.
+- **Quiz** — 245 questions: lecture-slide questions, your review-quiz and chapter-review questions (answers + explanations), and extra practice built from those topics (mucus physiology, bland aerosols, expectorants/antitussives, surfactant). Filter by question set, topic or learning objective; Practice mode (instant feedback) or Exam mode (score at the end, per-objective breakdown, review of misses). Missed questions are remembered for a "missed only" retake.
+- **Cases** — 23 multi-part patient scenarios: 14 worksheet/textbook cases (each ends with a model *Indicated Medication / Rationale* answer, with optional boxes to write yours first) plus 9 extra practice cases.
 - **Calc drill** — unlimited randomized calculation problems with worked solutions (including surfactant ml/kg doses).
 - **Terms** — searchable key-term flashcards.
 

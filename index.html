@@ -158,6 +158,7 @@ details.gsec[open] summary{border-bottom:1px solid var(--border)}
 .flow em{color:var(--muted);font-size:.82rem}
 .two{display:grid;gap:4px}
 @media (max-width:600px){
+  .tbl:not(.stack) table{min-width:0}
   .tbl.stack{border:0;overflow:visible}
   .tbl.stack table{min-width:0}
   .tbl.stack thead{display:none}
@@ -169,6 +170,8 @@ details.gsec[open] summary{border-bottom:1px solid var(--border)}
   .tbl.stack td:first-child::before{display:none!important}
 }
 @media (min-width:640px){.two{grid-template-columns:1fr 1fr;gap:20px}.toc{grid-template-columns:repeat(3,1fr)}}
+.say{background:var(--surface2);border-left:4px solid var(--accent);border-radius:12px;padding:12px 14px;margin:12px 0;font-style:italic}
+.say b{display:block;font-style:normal;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-bottom:4px}
 .work{background:var(--surface2);border-radius:12px;padding:10px 14px;font-size:.93rem;margin:8px 0}
 ul.check{list-style:none;padding-left:0}
 ul.check li{padding-left:26px;position:relative}
@@ -233,6 +236,7 @@ const OBJ = {
   s3:{u:"steroids",t:"Side effects & adverse effects"},
   s4:{u:"steroids",t:"Oral, parenteral & inhaled pharmacotherapy"},
   s5:{u:"steroids",t:"Leukotriene modifiers in asthma"},
+  s6:{u:"steroids",t:"Allergic inflammation, cromolyn & antihistamines (review)"},
   c1:{u:"calc",t:"Terms used to describe medication solutions"},
   c2:{u:"calc",t:"Strength of solutions in percentage form"},
   c3:{u:"calc",t:"Drug dosage calculations"}
@@ -240,6 +244,50 @@ const OBJ = {
 
 /* Questions: c[0] is always the correct answer (choices are shuffled on screen). */
 const Q = [
+/* ---------- Chapter 7 review (allergy, cromolyn, antihistamines) ---------- */
+{id:"r701",b:1,u:"steroids",o:"s6",q:"The most common antibody involved in allergic asthma and rhinitis is:",c:["IgE","IgG","IgF","IgT"],e:"IgE sits on mast cells. When an allergen cross-links it, the mast cell releases histamine and other mediators. (IgF, IgT and IgB don’t exist.)",s:"Chapter 7 review · #1"},
+{id:"r702",b:1,u:"steroids",o:"s1",q:"Corticosteroids can be classified as:",c:["Both mineralocorticoid and glucocorticoid","Mineralocorticoid only","Potassium sparing","Glucose sparing"],e:"The two classes are mineralocorticoids (salt and water) and glucocorticoids (anti-inflammatory).",s:"Chapter 7 review · #2"},
+{id:"r703",b:1,u:"steroids",o:"s4",q:"Routes used for corticosteroids include:",c:["All of these: inhalational, oral, intranasal and parenteral","Inhalational only","Oral and parenteral only","Intranasal only"],e:"Examples: inhaled (asthma), oral (prednisone burst), intranasal (allergic rhinitis) and parenteral/IV (status asthmaticus).",s:"Chapter 7 review · #3"},
+{id:"r704",b:1,u:"steroids",o:"s4",q:"Which indication is appropriate for prednisone?",c:["Both acute asthma (short burst) and chronic asthma (severe persistent)","Acute only","Chronic only","Neither; it isn’t used in asthma"],e:"Oral prednisone is used as a short burst for exacerbations, and long-term only when severe persistent asthma can’t be controlled otherwise (lowest dose, taper when stopping).",s:"Chapter 7 review · #4"},
+{id:"r705",b:1,u:"steroids",o:"s6",q:"Which indication is appropriate for cromolyn sodium?",c:["Chronic (preventive) asthma treatment only","Acute asthma treatment only","Both acute and chronic","Acute allergic reactions (anaphylaxis)"],e:"Cromolyn is a mast cell stabilizer. It prevents mediator release, so it must be taken before exposure and regularly. It does nothing for an attack already underway.",s:"Chapter 7 review · #4"},
+{id:"r706",b:1,u:"steroids",o:"s5",q:"Which indication is appropriate for zileuton?",c:["Chronic asthma treatment only","Acute asthma treatment only","Both acute and chronic","Allergic rhinitis rescue"],e:"Zileuton is a leukotriene modifier (5-lipoxygenase inhibitor) for long-term control, never rescue. Monitor liver enzymes.",s:"Chapter 7 review · #4"},
+{id:"r707",b:1,u:"steroids",o:"s6",q:"Which effect relates MOST closely to β-agonists?",c:["Block histamine release","Block histamine production","Block H₁ receptors","Digest histamine"],e:"β-agonists raise mast-cell cAMP, which inhibits degranulation (release). Their main job is still bronchodilation.",s:"Chapter 7 review · #5"},
+{id:"r708",b:1,u:"steroids",o:"s6",q:"Which effect relates MOST closely to cromolyn sodium?",c:["Blocks histamine release","Blocks histamine production","Blocks H₁ receptors","Increases β-receptor numbers"],e:"Cromolyn stabilizes the mast cell membrane so it doesn’t degranulate and release its mediators.",s:"Chapter 7 review · #5"},
+{id:"r709",b:1,u:"steroids",o:"s6",q:"Which effect relates MOST closely to corticosteroids?",c:["Block histamine (mediator) production","Block histamine release only","Block H₁ receptors","Act as bronchodilators"],e:"Corticosteroids work upstream: they reduce mediator synthesis and inflammatory cells. Remember “release vs production.”",s:"Chapter 7 review · #5"},
+{id:"r710",b:1,u:"steroids",o:"s6",q:"Which statement about the early and late phases of allergic inflammation is correct?",c:["Early phase occurs within minutes from mast-cell mediators; late phase develops hours later (~4–8 h) with eosinophils and other inflammatory cells","Early phase is caused by eosinophils; late phase by histamine","Both phases happen within 5 minutes","The late phase is relieved completely by albuterol"],e:"SABAs treat the early bronchospasm. Anti-inflammatories (corticosteroids, or cromolyn given beforehand) are needed for the late phase.",s:"Chapter 7 review · #6"},
+{id:"r711",b:1,u:"steroids",o:"s6",q:"Why does the late phase of allergic inflammation matter for drug choice?",c:["A rescue bronchodilator treats only the early phase. Without an anti-inflammatory, the patient worsens hours later and BHR increases","The late phase only responds to antihistamines","The late phase is harmless","Antibiotics prevent the late phase"],e:"This is why persistent allergic asthma needs a controller (ICS) and not just albuterol.",s:"Chapter 7 review · #6"},
+{id:"r712",b:1,u:"steroids",o:"s1",q:"Which is the best lay explanation of why a patient must not suddenly stop long-term prednisone?",c:["“Your adrenal glands have been resting because of the pills; if you stop suddenly, your body won’t have enough of its own steroid hormone until they wake up, which can be dangerous.”","“Prednisone is addictive, so you’ll crave it.”","“Stopping will make your lungs scar.”","“Prednisone stays in your body for months, so stopping doesn’t matter.”"],e:"HPA suppression → adrenal atrophy → adrenal crisis if stopped abruptly. Taper slowly.",s:"Chapter 7 review · #7"},
+{id:"r713",b:1,u:"steroids",o:"s6",q:"Which factor INHIBITS mediator release from mast cells?",c:["Increased intracellular cAMP (e.g., from β-agonists)","Allergen cross-linking of IgE","Increased cGMP from cholinergic stimulation","Calcium influx into the mast cell"],e:"↑ cAMP stabilizes mast cells. Allergen–IgE cross-linking, ↑ cGMP and calcium influx all promote release.",s:"Chapter 7 review · #8"},
+{id:"r714",b:1,u:"steroids",o:"s6",q:"Which can trigger mediator release from mast cells? I) Allergen exposure II) Exercise / cold dry air III) Irritants such as smoke IV) Respiratory infection",c:["I, II, III, and IV","I only","I and II","II and IV"],e:"Besides allergen–IgE cross-linking, nonspecific triggers such as exercise, cold air, irritants and infections can provoke release in sensitive airways.",s:"Chapter 7 review · #8"},
+{id:"r715",b:1,u:"steroids",o:"s6",q:"What are the most important side effects of first-generation antihistamines?",c:["Sedation/drowsiness and anticholinergic drying effects (dry mouth, blurred vision, urinary retention, thickened secretions)","Bronchospasm and hyperglycemia","Oral thrush and hoarseness","Hypertension and edema"],e:"First-generation drugs (e.g., diphenhydramine) cross into the brain and are strongly anticholinergic.",s:"Chapter 7 review · #9"},
+{id:"r716",b:1,u:"steroids",o:"s2",q:"A 57-year-old asthmatic has hoarseness, white spots on his throat and tongue, and a “funny taste.” Which medication and route are most likely responsible?",c:["An inhaled corticosteroid","An oral leukotriene modifier","A nebulized SABA","An intranasal antihistamine"],e:"Dysphonia and oropharyngeal candidiasis are classic ICS local side effects from drug deposited in the mouth and throat.",s:"Chapter 7 review · #10"},
+{id:"r717",b:1,u:"steroids",o:"s2",q:"For the patient with ICS-related thrush and hoarseness, which plan is best?",c:["Antifungal treatment per prescriber, add a spacer, rinse/gargle and spit after every dose, check technique and dose, and follow up","Stop the ICS permanently","Switch to daily oral prednisone","Double the ICS dose"],e:"Keep the controller and reduce oropharyngeal deposition. Thrush risk is dose-related, so use the lowest effective dose.",s:"Chapter 7 review · #10"},
+{id:"r718",b:1,u:"steroids",o:"s6",q:"A patient uses albuterol, an inhaled corticosteroid and cromolyn each morning. What is the best sequence?",c:["Albuterol → cromolyn → inhaled corticosteroid (then rinse)","Inhaled corticosteroid → cromolyn → albuterol","Cromolyn → albuterol → corticosteroid","Order doesn’t matter"],e:"Open the airways first so the controllers deposit deeper. Give the ICS last so the patient can rinse afterward.",s:"Chapter 7 review · #11"},
+{id:"r719",b:1,u:"steroids",o:"s6",q:"In lay terms, when is cromolyn indicated?",c:["“Every day and before your triggers (like exercise or allergens) to keep attacks from starting; it won’t stop an attack once it begins.”","“Only when you’re wheezing.”","“Once a month.”","“Only in the emergency room.”"],e:"Cromolyn is prophylactic. Its full benefit builds over 2–4 weeks of regular use.",s:"Chapter 7 review · #11"},
+
+{id:"x701",b:2,u:"steroids",o:"s6",q:"Cromolyn sodium is classified as a:",c:["Mast cell stabilizer","Leukotriene receptor antagonist","Corticosteroid","β₂-agonist"],e:"It prevents mast-cell degranulation, so mediators aren’t released.",s:"Built from chapter 7"},
+{id:"x702",b:2,u:"steroids",o:"s6",q:"A child with exercise-induced asthma is prescribed cromolyn. When should it be taken relative to soccer practice?",c:["Shortly before exercise (about 10–60 minutes)","Only after symptoms start","The night after practice","Once a week"],e:"Cromolyn must be on board before the trigger to block mast-cell release.",s:"Built from chapter 7"},
+{id:"x703",b:2,u:"steroids",o:"s6",q:"Nebulized cromolyn is typically dosed as:",c:["20 mg (one 2 ml ampule of 1%) four times daily","2.5 mg once daily","500 mg three times daily","0.5 ml of 0.5% every 4 hours"],e:"1% = 10 mg/ml × 2 ml = 20 mg, given QID for maintenance.",s:"Built from chapter 7"},
+{id:"x704",b:2,u:"steroids",o:"s5",q:"Zileuton differs from montelukast because zileuton:",c:["Inhibits 5-lipoxygenase, blocking leukotriene production; montelukast blocks the leukotriene receptor","Is a rescue inhaler","Is a corticosteroid","Is given IV"],e:"Both are oral leukotriene modifiers for chronic control. Zileuton needs liver-enzyme monitoring.",s:"Built from chapter 7"},
+{id:"x705",b:2,u:"steroids",o:"s5",q:"Which lab should be monitored in a patient taking zileuton?",c:["Liver enzymes","Serum potassium","Blood cultures","Sweat chloride"],e:"Zileuton can elevate liver enzymes (hepatotoxicity).",s:"Built from chapter 7"},
+{id:"x706",b:2,u:"steroids",o:"s6",q:"Which antihistamine is LEAST likely to cause drowsiness?",c:["Fexofenadine","Diphenhydramine","Chlorpheniramine","Hydroxyzine"],e:"Second-generation antihistamines (fexofenadine, loratadine) are far less sedating. Diphenhydramine, chlorpheniramine and hydroxyzine are sedating first-generation drugs.",s:"Built from chapter 7"},
+{id:"x707",b:2,u:"steroids",o:"s6",q:"Why might an RT be cautious about antihistamines in a patient with thick airway secretions?",c:["Their anticholinergic drying effect can thicken secretions and make them harder to clear","They break disulfide bonds","They cause bronchorrhea","They increase surfactant"],e:"Drying (anticholinergic) effects are among the main antihistamine side effects.",s:"Built from chapter 7"},
+{id:"x708",b:2,u:"steroids",o:"s6",q:"Antihistamines relieve allergy symptoms by:",c:["Blocking H₁ receptors so released histamine can’t act","Stabilizing mast cells to prevent release","Digesting histamine","Increasing IgE"],e:"Antihistamines block histamine’s effects after release. Cromolyn prevents the release itself.",s:"Built from chapter 7"},
+{id:"x709",b:2,u:"steroids",o:"s6",q:"Which inflammatory cell is most characteristic of the LATE asthmatic response?",c:["Eosinophil","Red blood cell","Platelet","Mast cell only"],e:"Eosinophils (with neutrophils and lymphocytes) are recruited hours later. Corticosteroids decrease eosinophils.",s:"Built from chapter 7"},
+{id:"x710",b:2,u:"steroids",o:"s6",q:"A patient has a “second wave” of wheezing 6 hours after allergen exposure even though albuterol helped at first. What is happening?",c:["A late-phase response; an anti-inflammatory such as a corticosteroid is needed","The albuterol caused it","An early-phase response","An adrenal crisis"],e:"SABAs don’t prevent the late phase.",s:"Built from chapter 7"},
+{id:"x711",b:2,u:"steroids",o:"s4",q:"For allergic rhinitis with significant nasal congestion, which steroid route is commonly used?",c:["Intranasal","Intravenous","Oral daily for years","Nebulized through a mask"],e:"Intranasal corticosteroids act locally on nasal inflammation, much as ICS do in the lungs.",s:"Built from chapter 7"},
+{id:"x712",b:2,u:"steroids",o:"s6",q:"Which statement about montelukast is correct?",c:["It is an oral leukotriene receptor antagonist for long-term control, usually taken once daily in the evening for asthma; watch for mood or behavior changes","It is a rescue inhaler","It is a mast cell stabilizer","It is a 5-lipoxygenase inhibitor"],e:"Montelukast carries a warning about neuropsychiatric effects (mood or behavior changes, sleep disturbance).",s:"Built from chapter 7"},
+/* ---------- Table 7-3 side effects ---------- */
+{id:"t01",b:1,u:"steroids",o:"s3",q:"A patient on long-term prednisone keeps getting pneumonias and skin infections. Which category of corticosteroid side effect is this?",c:["Immunologic: immunosuppression with increased susceptibility to infections","Ophthalmic","Metabolic","Cardiovascular"],e:"Table 7–3: immunologic effects are immunosuppression and increased susceptibility to infections.",s:"Textbook Table 7–3"},
+{id:"t02",b:1,u:"steroids",o:"s3",q:"Which pair is listed as CARDIOVASCULAR side effects of corticosteroids?",c:["Edema and hypertension","Hypotension and bradycardia","Glaucoma and cataracts","Euphoria and insomnia"],e:"Corticosteroids cause sodium and fluid retention, which leads to edema and hypertension.",s:"Textbook Table 7–3"},
+{id:"t03",b:1,u:"steroids",o:"s3",q:"A hospitalized patient on IV methylprednisolone is awake all night and unusually cheerful. These are which type of side effect?",c:["CNS: euphoria and insomnia","Dermatologic","Endocrinologic","Immunologic"],e:"Table 7–3 lists euphoria and insomnia as the CNS effects.",s:"Textbook Table 7–3"},
+{id:"t04",b:1,u:"steroids",o:"s3",q:"Which is NOT listed as a dermatologic side effect of corticosteroids?",c:["Thickened skin","Bruising","Impaired wound healing","Altered fat distribution"],e:"Steroids cause THIN skin, along with bruising, impaired wound healing and altered fat distribution.",s:"Textbook Table 7–3"},
+{id:"t05",b:1,u:"steroids",o:"s3",q:"A patient with no history of diabetes has a blood glucose of 280 mg/dl after three days of high-dose steroids. This is which category of side effect?",c:["Endocrinologic (steroid-induced diabetes/hyperglycemia)","Metabolic (negative nitrogen balance)","Musculoskeletal","Ophthalmic"],e:"Table 7–3 lists diabetes and the Cushingoid state as the endocrinologic effects.",s:"Textbook Table 7–3"},
+{id:"t06",b:1,u:"steroids",o:"s3",q:"Electrolyte imbalance and negative nitrogen balance are classified as which type of corticosteroid side effect?",c:["Metabolic","Cardiovascular","CNS","Immunologic"],e:"Both are metabolic. Negative nitrogen balance means protein breakdown, which contributes to muscle weakness and poor healing.",s:"Textbook Table 7–3"},
+{id:"t07",b:1,u:"steroids",o:"s3",q:"A child needing long-term systemic steroids should be monitored for which musculoskeletal effect?",c:["Growth suppression","Muscle hypertrophy","Increased bone density","Joint hypermobility"],e:"The musculoskeletal effects are muscle weakness, osteoporosis and growth suppression.",s:"Textbook Table 7–3"},
+{id:"t08",b:1,u:"steroids",o:"s3",q:"Which OPHTHALMIC side effect of corticosteroids is listed in Table 7–3?",c:["Glaucoma","Retinal detachment","Conjunctivitis","Color blindness"],e:"Glaucoma (increased intraocular pressure) is the listed ophthalmic effect. Cataracts are another well-known long-term steroid eye effect.",s:"Textbook Table 7–3"},
+{id:"t09",b:1,u:"steroids",o:"s3",q:"Which set contains ONLY corticosteroid side effects?",c:["Hypertension, osteoporosis, glaucoma, insomnia","Hypotension, weight loss, thick skin, hypoglycemia","Bradycardia, muscle hypertrophy, increased height, euphoria","Hypokinesis, bone growth, improved healing, edema"],e:"Every other option contains at least one opposite effect: hypotension, hypoglycemia, thick skin, muscle hypertrophy or improved healing.",s:"Textbook Table 7–3"},
+{id:"t10",b:1,u:"steroids",o:"s3",q:"Thin skin, bruising and poor wound healing on long-term prednisone are best explained partly by:",c:["Negative nitrogen balance (protein breakdown)","Increased collagen production","Hypoglycemia","Glaucoma"],e:"Protein breakdown (a metabolic effect) weakens skin and connective tissue, causing dermatologic effects like thin skin, bruising and impaired healing.",s:"Textbook Table 7–3"},
 /* ---------- MORE PRACTICE (round 2) ---------- */
 {id:"e01",b:2,u:"mucus",o:"m1",q:"Which delivery method for water to the airway is described as “highly variable”?",c:["Humidifiers","Small-volume nebulizers","Direct instillation","Ultrasonic nebulizers"],e:"Humidifiers are highly variable in output. SVNs are used for medication delivery and sputum induction, and LVNs and ultrasonics deliver significant aerosol volumes.",s:"Mucus slide 6"},
 {id:"e02",b:2,u:"mucus",o:"m3",q:"Small-volume (hand-held) nebulizers are mainly used for:",c:["Medication delivery and sputum induction","Continuous high-volume humidification","Croup tents","Direct instillation"],e:"Slide 6 lists SVN uses as medication delivery and sputum induction.",s:"Mucus slide 6"},
@@ -465,6 +513,47 @@ const Q = [
 
 const CASES = [
 /* ---------- WORKSHEET CASES (from course case-study assignment) ---------- */
+{id:"c71",ws:1,u:"steroids",title:"Case Study 7–1 — Fall flare-ups on rescue inhaler only",who:"24-year-old woman · persistent mild asthma",text:"A 24-year-old woman with persistent mild asthma is having more acute episodes, especially in the fall. During these periods her peak flows often drop to 50% of predicted, and she uses her quick-acting rescue bronchodilator frequently. That is the only respiratory medication she takes.",
+ answer:{med:"Add a daily anti-inflammatory controller. Preferred: a low-dose inhaled corticosteroid twice daily (spacer + rinse), or a combination ICS-formoterol. Alternatives: a leukotriene modifier (e.g., montelukast once daily in the evening) or cromolyn (taken regularly and before exposure). Start before and continue through the fall season. Keep the SABA for rescue only, use an asthma action plan with peak-flow monitoring, and treat severe episodes with a short oral steroid burst.",why:"Her frequent symptoms and big peak-flow drops show uncontrolled allergic inflammation, which a SABA alone doesn’t treat; it only relieves the early-phase bronchospasm. A daily controller blocks late-phase inflammation and lowers bronchial hyperresponsiveness, so episodes become fewer and milder. Controllers take time (ICS: 1–2 weeks for initial improvement, 4–8 weeks for maximum; seasonal BHR needs at least a week), so they should be started ahead of her known fall trigger season and used every day."},
+ steps:[
+ {q:"What does her pattern most clearly show?",c:["Her asthma is not controlled; she needs a daily anti-inflammatory controller, not just a rescue inhaler","Her albuterol dose is too low","She has COPD","Nothing; frequent SABA use is expected"],e:"Frequent rescue use and large peak-flow drops point to uncontrolled inflammation."},
+ {q:"Which controller is preferred for her?",c:["A low-dose inhaled corticosteroid (or ICS-formoterol)","A second short-acting bronchodilator","Daily oral prednisone year-round","An antihistamine"],e:"ICS are the backbone of persistent asthma control."},
+ {q:"Which are acceptable alternatives to a low-dose ICS in mild persistent asthma?",c:["A leukotriene modifier (e.g., montelukast) or cromolyn","Acetylcysteine or dornase alfa","IV methylprednisolone","Antibiotics"],e:"Per lecture, leukotriene modifiers are alternatives to low-dose ICS, and mast cell stabilizers are another preventive option."},
+ {q:"Her episodes are seasonal (fall). When should the controller be started?",c:["Before the season begins, and used daily through it","Only on days she’s wheezing","After her peak flow drops below 50%","Once the season ends"],e:"Controllers need time to work (seasonal BHR needs at least a week; ICS 1–2 weeks for initial improvement)."},
+ {q:"If she uses cromolyn, how should she take it?",c:["Regularly every day and before allergen exposure; it won’t stop an attack in progress","Only during an attack","Once a month","Only with food"],e:"Cromolyn is a preventive mast cell stabilizer."},
+ {info:"During a fall episode her peak flow is 48% of predicted and albuterol helps only briefly.",q:"Which is most appropriate in addition to her rescue inhaler?",c:["A short oral corticosteroid burst and medical evaluation, per her asthma action plan","Start cromolyn now to stop the attack","An antihistamine","Double her montelukast"],e:"A peak flow at or below ~50% signals a serious exacerbation. Systemic steroids treat the acute flare; controllers don’t stop an attack."},
+ {q:"Which teaching goes with her new ICS?",c:["Use it every day even when well, with a spacer, and rinse/gargle and spit after each dose","Use it only when peak flow drops","Swallow after each puff","Stop it once the fall season ends without telling her provider"],e:"This reduces thrush and ensures steady anti-inflammatory control."}
+]},
+{id:"c72",ws:1,u:"steroids",title:"Case Study 7–2 — Crane operator with new spring allergies",who:"40-year-old man · seasonal allergic rhinitis",text:"A 40-year-old man recently changed jobs and now works outdoors at a lumberyard, operating a large crane that moves logs. He has never had significant seasonal allergies, but this spring he developed severe allergy symptoms. He feels fine in the morning, but by lunchtime he has nasal congestion, itching and watery red eyes that affect his work.",
+ answer:{med:"A second-generation (non-sedating) oral antihistamine such as fexofenadine or loratadine, taken once daily in the morning before he goes to work and continued every day through the pollen season. An intranasal corticosteroid daily is a good option or add-on for the congestion.",why:"His symptoms come from allergen (pollen/wood dust) exposure at work: IgE-triggered mast cells release histamine, causing itching, sneezing, watery eyes and congestion. Antihistamines block H₁ receptors so released histamine can’t act, and taking one before exposure prevents symptoms. Because he operates a crane, he must avoid sedating first-generation antihistamines (e.g., diphenhydramine) and alcohol, and must not operate machinery if any antihistamine makes him drowsy; anticholinergic effects such as blurred vision also matter for his job. Intranasal steroids treat the nasal inflammation and congestion locally with little systemic effect."},
+ steps:[
+ {q:"What is causing his symptoms?",c:["Allergen exposure at work triggering IgE-mediated histamine release from mast cells","A viral infection","Side effects of an inhaled corticosteroid","Adrenal insufficiency"],e:"New outdoor exposure (pollen, wood dust) with classic allergic rhinitis and conjunctivitis symptoms."},
+ {q:"Which medication type is most appropriate?",c:["A second-generation (non-sedating) oral antihistamine","A first-generation antihistamine such as diphenhydramine","Oral prednisone daily all season","Acetylcysteine"],e:"Second-generation antihistamines relieve itching, sneezing and watery eyes with much less sedation."},
+ {q:"When should he take it?",c:["Every morning before work, so it is working before his exposure, daily through the season","Only at lunchtime once symptoms start","At bedtime only, after symptoms","Once a week"],e:"His symptoms start midday at work, so taking it before exposure prevents them."},
+ {q:"Given his job, what is the most important caution?",c:["Avoid sedating first-generation antihistamines and alcohol, and don’t operate the crane if he feels drowsy","Avoid drinking water","Take a double dose for faster relief","No precautions are needed"],e:"Sedation and blurred vision from antihistamines could be dangerous while operating heavy machinery."},
+ {q:"His nasal congestion is the most bothersome symptom. What could be added?",c:["A daily intranasal corticosteroid","Nebulized cromolyn for his lungs","IV methylprednisolone","Dornase alfa"],e:"Intranasal corticosteroids reduce nasal inflammation and congestion locally."},
+ {q:"Which antihistamine side effect could specifically affect his ability to see while operating the crane?",c:["Blurred vision (anticholinergic effect)","Hyperglycemia","Oral thrush","Bronchospasm"],e:"Anticholinergic effects include dry mouth, blurred vision and urinary retention."}
+]},
+{id:"c73",ws:1,u:"steroids",title:"Chapter 7 Case — Hoarse voice and white spots",who:"57-year-old man · asthma",text:"A 57-year-old asthmatic comes to clinic complaining of voice changes, hoarseness, white spots on his throat and tongue, and a “funny taste in his mouth.” He uses several inhalers but isn’t sure which is which.",
+ answer:{med:"Suspect his inhaled corticosteroid (by MDI or DPI). Treatment: an antifungal for the oropharyngeal candidiasis per the prescriber (e.g., nystatin swish-and-swallow or clotrimazole troches), and continue the ICS. Add a spacer/valved holding chamber for MDIs, rinse, gargle and spit after every dose, and recheck technique and dose.",why:"Hoarseness (dysphonia) and white plaques with altered taste are classic local side effects of ICS deposited in the mouth and throat: Candida albicans (or Aspergillus niger) infection of the mouth, pharynx and larynx. Risk is dose-related and higher if he also takes oral steroids. Stopping the ICS would leave his asthma uncontrolled, so the fix is treating the infection and reducing oropharyngeal deposition. Follow-up confirms the thrush has cleared, his voice has improved and his asthma is still controlled."},
+ steps:[
+ {q:"Which medication and route are most likely causing his symptoms?",c:["An inhaled corticosteroid","An oral leukotriene modifier","A short-acting β-agonist","An oral antihistamine"],e:"These are classic ICS local side effects."},
+ {q:"The white spots are most likely:",c:["Oropharyngeal candidiasis (Candida albicans)","Iatrogenic Cushing syndrome","Leukoplakia from albuterol","Allergic reaction to cromolyn"],e:"Candida albicans or Aspergillus niger infections occur in the mouth, pharynx and larynx."},
+ {q:"What is the hoarseness called?",c:["Dysphonia","Dysphagia","Dyspnea","Dysgeusia"],e:"Dysphonia is voice change or hoarseness, from steroid effects on the laryngeal muscles plus local irritation. (Dysgeusia is the altered “funny” taste.)"},
+ {q:"Which plan is best?",c:["Treat the thrush with an antifungal, continue the ICS, add a spacer, and rinse/gargle and spit after each dose","Stop all inhalers","Switch to long-term oral prednisone","Double the ICS dose"],e:"Keep the controller and reduce deposition."},
+ {q:"Which factor would make his thrush MORE likely?",c:["A higher ICS dose or also taking oral steroids","Using a spacer","Rinsing after each dose","Using a lower dose"],e:"Fungal infection is dose-related and more likely with concurrent oral steroids."},
+ {q:"What should follow-up include?",c:["Checking that the thrush has cleared, his voice has improved, his technique is correct and his asthma remains controlled","Nothing; these problems never recur","Checking sweat chloride","Liver enzymes"],e:"Education plus follow-up prevents recurrence while keeping asthma controlled."}
+]},
+{id:"c74",ws:1,u:"steroids",title:"Chapter 7 Case — Three inhalers, one routine",who:"Adult with severe late-phase asthma responses",text:"A patient with a history of severe late-phase asthma responses is prescribed an inhaled short-acting bronchodilator, an inhaled corticosteroid and a mast cell stabilizer (cromolyn). The patient asks you to explain, in plain language, when to use each one.",
+ answer:{med:"Short-acting bronchodilator (albuterol): rescue for sudden symptoms, and first in the routine to open the airways. Mast cell stabilizer (cromolyn): every day and before known triggers, to keep attacks from starting. Inhaled corticosteroid: every day, last in the routine, then rinse, gargle and spit. Order: bronchodilator → cromolyn → ICS.",why:"Late-phase reactions are driven by inflammatory cells hours after exposure; a bronchodilator alone only treats the early bronchospasm. Cromolyn prevents mast cells from releasing mediators (blunting both phases if taken beforehand), and the ICS suppresses ongoing inflammation and late-phase responses. Giving the bronchodilator first opens the airways so the controllers reach deeper, and giving the ICS last lets the patient rinse away throat deposits. Side effects to mention: albuterol shakiness and fast heartbeat; cromolyn mild cough or throat irritation; ICS thrush and hoarseness. Expected benefits build over weeks: fewer and milder attacks, less rescue use, better sleep and steadier peak flows."},
+ steps:[
+ {q:"In plain language, when is the short-acting bronchodilator used?",c:["“For quick relief when you’re wheezing or tight, and first in your daily routine to open your airways.”","“Only once a month.”","“Only after the steroid.”","“Never at home.”"],e:"The SABA is the rescue drug, and it also goes first in the routine."},
+ {q:"In plain language, when is cromolyn used?",c:["“Every day, and before your triggers, to stop attacks from starting; it won’t help once an attack has begun.”","“Only during an attack.”","“Once a week.”","“Only if the steroid isn’t working.”"],e:"Cromolyn is a preventive mast cell stabilizer."},
+ {q:"In plain language, when is the inhaled corticosteroid used?",c:["“Every day, even when you feel fine, to calm the swelling in your airways; then rinse and spit.”","“Only when you’re short of breath.”","“Only in the fall.”","“As a rescue inhaler.”"],e:"ICS are daily maintenance drugs that control the late-phase inflammation."},
+ {q:"What is the correct sequence?",c:["Bronchodilator → cromolyn → inhaled corticosteroid","Corticosteroid → cromolyn → bronchodilator","Cromolyn → corticosteroid → bronchodilator","Any order"],e:"Open the airways first, and give the ICS last so the patient can rinse."},
+ {q:"Which side-effect counseling is correct?",c:["Albuterol: shakiness and fast heartbeat. Cromolyn: mild cough or throat irritation. ICS: thrush and hoarseness (prevent with spacer + rinse)","All three cause adrenal crisis","Cromolyn causes Cushing syndrome","Albuterol causes oral thrush"],e:"Each drug has its own side-effect profile, and cromolyn has very few."},
+ {q:"What positive outcomes should the patient expect, and when?",c:["Over several weeks: fewer and milder attacks, less rescue-inhaler use, better sleep and steadier peak flows","Complete cure within 24 hours","No change for a year","Immediate relief from the ICS"],e:"Controllers work over weeks (ICS max 4–8 weeks; cromolyn 2–4 weeks)."}
+]},
 {id:"wm1",ws:1,u:"mucus",title:"Mucus Case 1 — CF teen with thick, green sputum",who:"15-year-old male · cystic fibrosis",text:"A 15-year-old male with confirmed CF presents for a routine pulmonary clinic visit. His parents report that although he does airway clearance therapy twice daily, his sputum has become increasingly thick, green and tenacious, making it hard to expectorate. Spirometry shows his FEV1 has declined to 65% of predicted. The physician wants to add a mucoactive agent.",
  answer:{med:"Dornase alfa (Pulmozyme) 2.5 mg (one ampule), inhaled undiluted by jet nebulizer once daily, given before airway clearance.",why:"His thick, green (purulent) sputum is full of extracellular DNA released by dead neutrophils, and that DNA makes the sputum much more viscous. Dornase alfa is recombinant human DNase I: it digests the extracellular DNA, lowering viscosity so secretions flow and can be cleared. It is indicated as maintenance therapy for the viscous secretions of CF, and it improves FEV1 and reduces exacerbations. Giving it before airway clearance lets the thinned secretions be mobilized."},
  steps:[
@@ -638,6 +727,16 @@ const CASES = [
 ];
 
 const TERMS = [
+ {u:"steroids",t:"IgE",d:"The antibody of allergic asthma and rhinitis. It coats mast cells, and an allergen cross-linking it triggers mediator release."},
+ {u:"steroids",t:"Mast cell",d:"Tissue cell that degranulates on IgE cross-linking, releasing histamine, leukotrienes and prostaglandins. ↑ cAMP (β-agonists) inhibits release; ↑ cGMP and calcium influx promote it."},
+ {u:"steroids",t:"Early vs late phase",d:"Early: minutes, mast-cell mediators → bronchospasm (SABA treats). Late: ~4–8 h, eosinophils and other cells → inflammation and BHR (corticosteroids treat; cromolyn beforehand blunts both)."},
+ {u:"steroids",t:"Cromolyn sodium",d:"Mast cell stabilizer that blocks histamine RELEASE. Preventive only: take daily and before triggers (nebulized 20 mg QID). Few side effects."},
+ {u:"steroids",t:"Zileuton",d:"Leukotriene modifier: 5-lipoxygenase inhibitor that blocks leukotriene production. Oral, chronic use; monitor liver enzymes."},
+ {u:"steroids",t:"Montelukast / zafirlukast",d:"Leukotriene receptor antagonists for chronic control. Montelukast: once daily in the evening, watch mood/behavior. Zafirlukast: empty stomach."},
+ {u:"steroids",t:"Antihistamine",d:"H₁-receptor blocker that blocks histamine’s effects after release. Side effects: sedation (1st gen), anticholinergic drying (dry mouth, blurred vision, urinary retention, thick secretions). 2nd gen (fexofenadine, loratadine, cetirizine) are less sedating."},
+ {u:"steroids",t:"Dysphonia",d:"Hoarseness or voice change; a local side effect of inhaled corticosteroids."},
+ {u:"steroids",t:"Steroid side effects by system (Table 7–3)",d:"Immunologic: immunosuppression, infections · Cardiovascular: edema, hypertension · CNS: euphoria, insomnia · Dermatologic: thin skin, impaired wound healing, bruising, altered fat distribution · Endocrine: diabetes, Cushingoid state · Metabolic: electrolyte imbalance, negative nitrogen balance · Musculoskeletal: muscle weakness, osteoporosis, growth suppression · Ophthalmic: glaucoma."},
+ {u:"steroids",t:"Negative nitrogen balance",d:"More protein broken down than built. A metabolic effect of corticosteroids that contributes to muscle weakness/wasting and poor wound healing."},
  {u:"mucus",t:"Mucosal (mucus) blanket",d:"The two-layer covering of the airways: a watery sol (periciliary) layer where cilia beat, under a viscous gel layer that traps particles."},
  {u:"mucus",t:"Goblet cells & submucosal glands",d:"The mucus-producing structures; together about 100 ml/day. Submucosal glands make most of it and enlarge and multiply with chronic irritation."},
  {u:"mucus",t:"Viscoelasticity",d:"Mucus’s combined viscosity (thickness) and elasticity. Adequate water keeps it in the range cilia can transport; too thick or too thin impairs clearance."},
@@ -1147,6 +1246,7 @@ ${TRAP("One F508del copy is enough; two are not required. Age 2 is the floor: an
  <li>The body <b>can’t tell exogenous drug from its own cortisol</b>, so long-term steroid therapy → <b>HPA suppression</b> → <b>adrenal atrophy</b>.</li>
  <li><b>Abrupt withdrawal</b> after prolonged use → the atrophied adrenals can’t make cortisol → <b>acute adrenal crisis</b>. Prevention: <b>taper over weeks or months</b>.</li>
 </ul>
+<div class="say"><b>Say it to the patient</b>“Your body makes its own steroid hormone, called cortisol, in two small glands on top of your kidneys. Your brain works like a thermostat: when cortisol is low, it tells those glands to make more. When you take steroid pills for a long time, your brain sees plenty of steroid and tells the glands to rest, so they get lazy and shrink. If you suddenly stop the pills, your body is left with too little cortisol until the glands wake up, which can make you very weak, dizzy, or even dangerously sick. That’s why we lower the dose slowly instead of stopping all at once.”</div>
 <h4>Mechanism of action (slide 8)</h4>
 ${T(["Cellular","Clinical"],[
  ["Block arachidonic-acid metabolites (<b>leukotrienes and prostaglandins</b>)","↓ airway inflammation"],
@@ -1175,6 +1275,7 @@ ${T(["Finding","What to do"],[
  ["“It’s not working” after a few days","Reassure: onset is 1–2 weeks. Reinforce daily use."],
  ["Using it only when wheezy","Re-teach controller vs rescue."],
  ["White patches in mouth / sore throat","Oropharyngeal candidiasis: treat it, add a spacer, rinse and spit. <b>Don’t stop the ICS.</b>"],
+ ["Hoarseness / voice change, white spots, “funny taste”","Classic <b>ICS local side effects</b>: dysphonia plus oral thrush. Antifungal (e.g., nystatin swish or clotrimazole troche) per prescriber, spacer, rinse/gargle and spit, check technique, consider the lowest effective dose or a different device. Follow up to confirm it clears."],
  ["Rising rescue-inhaler use","Check <b>technique and adherence first</b>, then step up (higher-dose ICS or ICS-LABA combination)."],
  ["Also on oral steroids","Higher thrush risk. Never stop long-term OCS abruptly; <b>taper</b>."],
 ])}
@@ -1189,7 +1290,7 @@ ${TRAP("ICS for an acute attack = wrong (onset is weeks). ICS + thrush = keep th
  <li>Moon face</li><li>Buffalo hump</li><li>Obesity; abdominal striae</li><li>Osteoporosis</li><li>Muscle <b>wasting</b> of the extremities</li><li>Skin ulcers / poor wound healing</li><li>Cardiac hypertrophy</li><li>Women: dark facial hair, amenorrhea</li>
 </ul>
 <p><b>HPA suppression</b> → adrenal atrophy → <b>adrenal crisis</b> if stopped abruptly.</p>
-${NOTE("Also common with short courses (textbook): hyperglycemia, fluid retention, mood changes/insomnia.")}
+${NOTE("Even short courses commonly cause hyperglycemia, fluid retention and mood changes/insomnia (see Table 7–3 below).")}
 </div>
 <div><h4>Local (inhaled)</h4>
 <ul>
@@ -1200,6 +1301,18 @@ ${NOTE("Also common with short courses (textbook): hyperglycemia, fluid retentio
 ${NOTE("Also seen (textbook): dysphonia/hoarseness, cough.")}
 <p>Systemic risk with ICS is <b>very low at therapeutic doses</b>.</p>
 </div></div>
+<h4>Side effects by body system (Table 7–3)</h4>
+${T(["Category","Side effects"],[
+ ["Immunologic","Immunosuppression; <b>increased susceptibility to infections</b>"],
+ ["Cardiovascular","<b>Edema</b>; <b>hypertension</b>"],
+ ["CNS","<b>Euphoria</b>; <b>insomnia</b>"],
+ ["Dermatologic","<b>Thin skin</b>; impaired wound healing; <b>bruising</b>; altered fat distribution"],
+ ["Endocrinologic","<b>Diabetes</b> (hyperglycemia); Cushingoid state"],
+ ["Metabolic","<b>Electrolyte imbalance</b>; <b>negative nitrogen balance</b> (protein breakdown)"],
+ ["Musculoskeletal","Muscle weakness; <b>osteoporosis</b>; <b>growth suppression</b> (children)"],
+ ["Ophthalmic","<b>Glaucoma</b>"],
+])}
+${HOOK("Steroids make you <b>Sweet</b> (diabetes), <b>Puffy</b> (edema, HTN), <b>Wired</b> (euphoria, insomnia), <b>Fragile</b> (thin skin, bruising, osteoporosis, weak muscles), <b>Infected</b> (immunosuppression), <b>Short</b> (growth suppression) and <b>Pressured eyes</b> (glaucoma).")}
 ${HOOK("Cushingoid = <b>“round in the middle, thin at the edges”</b>: moon face, buffalo hump and belly fat, but skinny, wasted arms and legs.")}
 ${TRAP("Muscle HYPERtrophy is a wrong answer; it’s muscle WASTING.")}
 `},
@@ -1223,6 +1336,61 @@ ${HOOK("<b>O</b>ral = <b>O</b>nset in hours. <b>I</b>nhaled = <b>I</b>nvestment 
 <div class="key"><b>Leukotriene modifiers</b> block the action of leukotrienes (triggers for asthma attacks). They are <b>alternatives to low-dose inhaled steroids in mild persistent asthma</b> and are used for <b>long-term control, NOT acute treatment</b>.</div>
 ${NOTE("Example (general knowledge): montelukast, an oral tablet taken daily. Corticosteroids also block leukotriene production upstream by blocking arachidonic-acid metabolites.")}
 ${TRAP("“Take your montelukast during the attack” = wrong; use the rescue SABA. For moderate/severe persistent asthma, an ICS-based controller is preferred over an LTM alone.")}
+`},
+{o:"s6", h:"Allergic inflammation, mast cell stabilizers & antihistamines (textbook review)", body:`
+<h4>The allergic cascade</h4>
+<div class="flow"><span>Allergen</span>→<span>binds <b>IgE</b> on mast cells</span>→<span>mast cell degranulates</span>→<span>histamine, leukotrienes, prostaglandins</span></div>
+<ul>
+ <li><b>IgE</b> is the antibody behind allergic asthma and allergic rhinitis. It coats mast cells, and when an allergen cross-links two IgE molecules, the mast cell releases its mediators.</li>
+ <li>The mediators cause bronchospasm, mucosal edema (vascular leak) and mucus secretion. In the nose and eyes they cause congestion, itching, sneezing and watery eyes.</li>
+</ul>
+<h4>Early vs late phase</h4>
+${T(["","Early (immediate) phase","Late phase"],[
+ ["Timing","Within minutes (peaks ~15–30 min); resolves in about 1–2 h","Develops ~4–8 h later; can last 24 h or more"],
+ ["What drives it","Mast-cell mediators: histamine, leukotrienes, prostaglandins","Recruited inflammatory cells: <b>eosinophils</b>, neutrophils, lymphocytes"],
+ ["Result","Bronchospasm, edema, mucus","Ongoing airway inflammation, ↑ bronchial hyperresponsiveness, prolonged obstruction"],
+ ["Drugs that help","<b>SABA</b> reverses the bronchospasm; <b>cromolyn</b> taken beforehand prevents it","<b>Corticosteroids</b> block it; <b>cromolyn</b> taken beforehand blunts it"],
+])}
+<p><b>Why it matters for drug therapy:</b> a rescue bronchodilator treats only the early bronchospasm. If the late phase isn’t controlled with an anti-inflammatory, the patient gets worse hours later and the airways become more twitchy over time.</p>
+<h4>Factors that influence mediator release from mast cells</h4>
+<ul>
+ <li><b>Allergen exposure</b> cross-linking IgE on the mast cell surface (the main trigger)</li>
+ <li><b>Intracellular cAMP:</b> ↑ cAMP <i>inhibits</i> release (β-agonists raise cAMP). ↑ cGMP from cholinergic/vagal stimulation <i>promotes</i> release</li>
+ <li><b>Calcium influx</b> into the mast cell, which is needed for degranulation (cromolyn interferes with it)</li>
+ <li><b>Non-allergic triggers:</b> exercise, cold or dry air, irritants and pollutants (smoke), respiratory infections</li>
+</ul>
+<h4>Comparing the anti-asthma and anti-allergy drugs</h4>
+${T(["Drug","Class / action","Acute or chronic?","Key points"],[
+ ["Albuterol (SABA)","β₂-agonist bronchodilator; also ↑ cAMP → <b>blocks histamine RELEASE</b>","<b>Acute</b> rescue","Treats early-phase bronchospasm; no effect on late-phase inflammation"],
+ ["Prednisone (OCS)","Corticosteroid; <b>blocks mediator/histamine PRODUCTION</b> and inflammatory cells","<b>Both</b>: short burst for acute exacerbations; long-term only for severe persistent asthma","Onset 4–6 h. Taper after prolonged use"],
+ ["Inhaled corticosteroid","Corticosteroid, localized","<b>Chronic</b> control","1–2 wk onset; spacer + rinse"],
+ ["Cromolyn sodium","<b>Mast cell stabilizer</b>: <b>blocks histamine RELEASE</b> (degranulation)","<b>Chronic</b> / prophylactic only","Must be taken <b>before</b> exposure (e.g., 10–60 min before exercise or allergen) and regularly (nebulized 20 mg QID). Full benefit takes 2–4 weeks. Very few side effects (cough, throat irritation)"],
+ ["Zileuton","Leukotriene modifier: <b>5-lipoxygenase inhibitor</b> (blocks leukotriene <i>production</i>)","<b>Chronic</b>","Oral; <b>monitor liver enzymes</b>"],
+ ["Montelukast / zafirlukast","Leukotriene <b>receptor antagonists</b>","<b>Chronic</b>","Oral. Montelukast once daily in the evening (watch for mood/behavior changes); zafirlukast on an empty stomach"],
+ ["Antihistamines","H₁-receptor blockers: block histamine’s <i>effects</i> after release","Allergic rhinitis / conjunctivitis","Not for acute asthma"],
+])}
+${HOOK("<b>Release vs production:</b> β-agonists and cromolyn keep the mast cell’s “bag” <b>closed</b> (block release). Corticosteroids <b>shut down the factory</b> (block production).")}
+<h4>Antihistamines: important side effects</h4>
+${T(["Effect","Notes"],[
+ ["<b>Sedation / drowsiness</b>","Mainly <b>first-generation</b> drugs (diphenhydramine, chlorpheniramine) that cross into the brain. Worse with alcohol. No driving or operating machinery"],
+ ["<b>Anticholinergic (drying)</b> effects","Dry mouth, blurred vision, urinary retention, constipation, tachycardia"],
+ ["<b>Thickened, dried secretions</b>","Relevant to RTs: can make airway secretions harder to clear"],
+ ["Paradoxical excitation","Especially in young children"],
+ ["Second-generation drugs","Loratadine, cetirizine, fexofenadine: much <b>less sedating</b> (fexofenadine least; cetirizine can still cause drowsiness)"],
+])}
+<h4>Corticosteroid basics from the chapter review</h4>
+<ul>
+ <li>Classified as <b>mineralocorticoids and glucocorticoids</b>.</li>
+ <li>Routes: <b>inhaled, oral, intranasal and parenteral</b> (all of them).</li>
+</ul>
+<h4>Using a SABA, an ICS and cromolyn together</h4>
+<ol class="steps">
+ <li><b>Bronchodilator first</b> (albuterol): opens the airways in minutes so the next drugs reach deeper.</li>
+ <li><b>Mast cell stabilizer</b> (cromolyn): preventive, taken every day and before triggers; it won’t stop an attack already happening.</li>
+ <li><b>Inhaled corticosteroid last</b>, then <b>rinse, gargle and spit</b>.</li>
+</ol>
+<p><b>Positive outcomes to expect:</b> fewer and milder attacks, less rescue-inhaler use, fewer night symptoms, higher and steadier peak flows, and less late-phase “second wave” worsening. These build over <b>weeks</b>, not minutes.</p>
+${TRAP("Cromolyn and leukotriene modifiers are <b>never</b> rescue drugs. Prednisone can be <b>both</b> acute and chronic, while cromolyn and zileuton are chronic only.")}
 `},
 ]},
 {u:"calc", title:"Calculating Drug Doses", objs:[
@@ -1291,7 +1459,11 @@ const HIGH_YIELD = [
  ["Seasonal BHR / EIB","≥1 week / 4 weeks"],
  ["Stop long-term steroids","Taper (weeks–months), or adrenal crisis"],
  ["ICS thrush","Candida albicans / Aspergillus niger: spacer + gargle"],
+ ["Systemic steroid SEs","Infection, edema/HTN, euphoria/insomnia, thin skin/bruising, diabetes, electrolyte imbalance, osteoporosis, growth suppression, glaucoma"],
  ["LTM","Alternative to low-dose ICS (mild persistent); not rescue"],
+ ["Allergy","IgE on mast cells → histamine, leukotrienes. Early phase = minutes; late phase = 4–8 h (eosinophils)"],
+ ["Cromolyn","Mast cell stabilizer; blocks release; preventive only; take before exposure"],
+ ["Antihistamines","Sedation (1st gen), anticholinergic drying; no machinery"],
  ["% → mg/ml","Decimal 1 right (×10)"],
  ["Weight","lb ÷ 2.2 = kg; dose = mg/kg × kg"],
 ];
