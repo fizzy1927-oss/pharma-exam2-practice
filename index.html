@@ -172,6 +172,9 @@ details.gsec[open] summary{border-bottom:1px solid var(--border)}
 @media (min-width:640px){.two{grid-template-columns:1fr 1fr;gap:20px}.toc{grid-template-columns:repeat(3,1fr)}}
 .say{background:var(--surface2);border-left:4px solid var(--accent);border-radius:12px;padding:12px 14px;margin:12px 0;font-style:italic}
 .say b{display:block;font-style:normal;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-bottom:4px}
+pre.prop{background:var(--surface2);border-radius:12px;padding:10px 14px;margin:8px 0;font:14px/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto;white-space:pre}
+.key pre.prop{background:var(--surface);margin:8px 0}
+@media (max-width:420px){pre.prop{font-size:13px;padding:10px 12px}}
 .work{background:var(--surface2);border-radius:12px;padding:10px 14px;font-size:.93rem;margin:8px 0}
 ul.check{list-style:none;padding-left:0}
 ul.check li{padding-left:26px;position:relative}
@@ -1420,26 +1423,57 @@ ${T(["Solution","%","mg/ml"],[
 ])}
 `},
 {o:"c3", h:"Drug dosage calculations", body:`
-<h4>The proportion method (slides 7–8)</h4>
+<h4>Fast proportion setup (slides 7–8)</h4>
+<div class="key"><b>One template for every problem:</b>
+<pre class="prop">  HAVE       WANT
+ ─────── = ───────
+  per 1     per x</pre>
+<b>Same units on top, same units on the bottom.</b> Then cross-multiply. If <b>x is on the bottom, divide</b> (want ÷ have). If <b>x is on top, multiply</b>.</div>
 <ol class="steps">
- <li><b>Convert</b> to consistent units (% → mg/ml; lb → kg ÷ 2.2; g → kg ÷ 1000).</li>
- <li><b>Set up</b>: Original dose / per amount = Desired dose / per amount.</li>
- <li><b>Solve</b>: ml = desired mg ÷ concentration (mg/ml).</li>
+ <li><b>Convert the % to mg/ml</b> (move the decimal 1 place right). That number goes in the “have” box over <b>1 ml</b>.</li>
+ <li>Put the <b>ordered mg</b> on top of the other side, with <b>x ml</b> underneath.</li>
+ <li>Cross-multiply: <b>(have) × x = (want) × 1</b> → x = want ÷ have.</li>
 </ol>
-<h4>Slide examples, worked</h4>
-${T(["Order","Have","Concentration","Give"],[
- ["Albuterol 5 mg","0.5%","5 mg/ml","<b>1 ml</b>"],
- ["Albuterol 2.5 mg","0.5%","5 mg/ml","<b>0.5 ml</b>"],
- ["Acetylcysteine 500 mg","20%","200 mg/ml","<b>2.5 ml</b>"],
- ["Acetylcysteine 800 mg","10%","100 mg/ml","<b>8 ml</b>"],
+<h4>Ml to give: slide examples</h4>
+<p class="small" style="margin:12px 0 0"><b>Albuterol 2.5 mg, have 0.5% (= 5 mg/ml)</b></p>
+<pre class="prop">  5 mg     2.5 mg
+ ────── = ────────
+  1 ml      x ml
+
+ 5x = 2.5 → x = <b>0.5 ml</b></pre>
+<p class="small" style="margin:12px 0 0"><b>NAC 500 mg, have 20% (= 200 mg/ml)</b></p>
+<pre class="prop"> 200 mg    500 mg
+ ────── = ────────
+  1 ml      x ml
+
+ 200x = 500 → x = <b>2.5 ml</b></pre>
+<p class="small" style="margin:12px 0 0"><b>NAC 800 mg, have 10% (= 100 mg/ml)</b></p>
+<pre class="prop"> 100 mg    800 mg
+ ────── = ────────
+  1 ml      x ml
+
+ 100x = 800 → x = <b>8 ml</b></pre>
+<h4>The same template works for every type</h4>
+${T(["Problem","Set it up as","Answer"],[
+ ["lb → kg (44 lb)","2.2 lb / 1 kg = 44 lb / x kg","x = 44 ÷ 2.2 = <b>20 kg</b>"],
+ ["Weight-based dose (0.1 mg/kg, 20 kg)","0.1 mg / 1 kg = x mg / 20 kg","x on top → multiply: <b>2 mg</b>"],
+ ["mg in a volume (3 ml of 1%)","10 mg / 1 ml = x mg / 3 ml","x on top → multiply: <b>30 mg</b>"],
+ ["Tablets (40 mg, 20 mg tabs)","20 mg / 1 tab = 40 mg / x tab","<b>2 tablets</b>"],
+ ["Surfactant (Survanta, 800 g)","4 ml / 1 kg = x ml / 0.8 kg","x on top → multiply: <b>3.2 ml</b>"],
 ])}
-<h4>Weight-based (dosage schedule, slide 14)</h4>
-<p>Get the weight first. <b>Dose = mg/kg × kg</b>, then use the proportion.</p>
-<div class="work">Order: 0.1 mg/kg · child 44 lb · 0.5% solution<br>① 44 ÷ 2.2 = 20 kg ② 0.1 × 20 = 2 mg ③ 0.5% = 5 mg/ml ④ 2 ÷ 5 = <b>0.4 ml</b></div>
+<h4>Weight-based = two proportions in a row</h4>
+<p class="small muted">Order: 0.1 mg/kg · child 44 lb · 0.5% solution</p>
+<pre class="prop">① 2.2 lb/1 kg = 44 lb/x kg
+     → <b>20 kg</b>
+② 0.1 mg/1 kg = x mg/20 kg
+     → <b>2 mg</b>
+③ 5 mg/1 ml   = 2 mg/x ml
+     → <b>0.4 ml</b></pre>
+${HOOK("<b>“Have over one, want over x.”</b> Line up the units and the setup does the thinking. Quick check: a nebulizer drug volume is usually 0.25–5 ml, so an answer like 25 ml means you skipped the % → mg/ml step.")}
 <h4>Diluent misconception (slide 15)</h4>
 <p>Diluent does <b>not</b> weaken the dose. ½ ml of a 1% drug = <b>5 mg</b> whether diluted with 2 ml or 10 ml of saline. What’s left in the nebulizer is only diluent.</p>
 <h4>Surfactant (review quizzes)</h4>
-<p>Convert g → kg, then multiply: <b>Survanta 4 ml/kg · Infasurf 3 ml/kg · Curosurf 2.5 ml/kg</b> (1.25 ml/kg repeat). Example: Survanta for 800 g → 0.8 × 4 = <b>3.2 ml</b>.</p>
+<p><b>Survanta 4 ml/kg · Infasurf 3 ml/kg · Curosurf 2.5 ml/kg</b> (1.25 ml/kg repeat). Convert g → kg first.</p>
 ${TRAP("The commonest error is using the % as if it were mg/ml (e.g., drawing up 5 ml of 0.5% albuterol = 25 mg, 10× the 2.5 mg dose). Always convert first, and sanity-check that nebulizer drug volumes are usually 0.5–5 ml.")}
 `},
 ]}
