@@ -7,8 +7,8 @@ A single-page study site for Respiratory Care Pharmacology:
 - **Calculating Drug Doses** — % ↔ mg/ml, proportions, weight-based dosing
 
 ## Features
-- **Guide** — exam study guide organized by the 13 learning objectives (tables, exam traps, memory hooks, high-yield facts), with a *Practice this* button per objective and a print-friendly layout.
-- **Quiz** — 245 questions: lecture-slide questions, your review-quiz and chapter-review questions (answers + explanations), and extra practice built from those topics (mucus physiology, bland aerosols, expectorants/antitussives, surfactant). Filter by question set, topic or learning objective; Practice mode (instant feedback) or Exam mode (score at the end, per-objective breakdown, review of misses). Missed questions are remembered for a "missed only" retake.
+- **Guide** — exam study guide organized by the 13 learning objectives (tables, exam traps, memory hooks, high-yield facts), with a *Practice this* button per objective, a high-yield sheet grouped by objective, cleaned-up textbook notes (Ch. 6–7) with a list of textbook/slide conflicts, and a print-friendly layout.
+- **Quiz** — 305 questions: lecture-slide questions, your review-quiz and chapter-review questions (answers + explanations), and extra practice built from those topics (mucus physiology, bland aerosols, expectorants/antitussives, surfactant). Filter by question set, topic or learning objective; Practice mode (instant feedback) or Exam mode (score at the end, per-objective breakdown, review of misses). Missed questions are remembered for a "missed only" retake.
 - **Cases** — 23 multi-part patient scenarios: 14 worksheet/textbook cases (each ends with a model *Indicated Medication / Rationale* answer, with optional boxes to write yours first) plus 9 extra practice cases.
 - **Calc drill** — unlimited randomized calculation problems with worked solutions (including surfactant ml/kg doses).
 - **Terms** — searchable key-term flashcards.

@@ -175,6 +175,12 @@ details.gsec[open] summary{border-bottom:1px solid var(--border)}
 pre.prop{background:var(--surface2);border-radius:12px;padding:10px 14px;margin:8px 0;font:14px/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto;white-space:pre}
 .key pre.prop{background:var(--surface);margin:8px 0}
 @media (max-width:420px){pre.prop{font-size:13px;padding:10px 12px}}
+.tb{display:inline-block;font-size:.66rem;font-weight:700;padding:1px 6px;border-radius:999px;background:color-mix(in srgb,var(--gold) 22%,transparent);color:var(--text);vertical-align:1px;white-space:nowrap}
+details.hyu{margin-top:14px;border-top:1px solid var(--border);padding-top:10px}
+details.hyu>summary{cursor:pointer;font-weight:700;display:flex;gap:8px;align-items:center;list-style:none}
+details.hyu>summary::-webkit-details-marker{display:none}
+h4.hyo{margin:14px 0 4px;font-size:.9rem;color:var(--accent)}
+.hy .tbl td:first-child{white-space:normal;width:34%}
 .work{background:var(--surface2);border-radius:12px;padding:10px 14px;font-size:.93rem;margin:8px 0}
 ul.check{list-style:none;padding-left:0}
 ul.check li{padding-left:26px;position:relative}
@@ -247,6 +253,69 @@ const OBJ = {
 
 /* Questions: c[0] is always the correct answer (choices are shuffled on screen). */
 const Q = [
+/* ---------- Textbook Ch. 6–7 homework ---------- */
+{id:"h601",b:1,u:"mucus",o:"m6",q:"The most mucus is produced in the airways by which of the following?",c:["Bronchial glands","Goblet cells","Clara (club) cells","Serous cells"],e:"Bronchial glands in the submucosa produce most of the mucus found in the airways.",s:"Ch. 6 homework"},
+{id:"h602",b:1,u:"mucus",o:"m6",q:"Which are responsible for the primary mucus production within the lungs? I) Goblet cells II) Bronchial glands III) Type I pneumocytes IV) Type II pneumocytes",c:["I and II","I only","II, III, and IV","II and IV"],e:"Mucus is primarily produced by goblet cells and bronchial glands. Type II pneumocytes make surfactant, not mucus.",s:"Ch. 6 homework"},
+{id:"h603",b:1,u:"mucus",o:"m6",q:"True or false: Bronchial smooth muscle is located in the mucosa.",c:["False","True"],e:"Bronchial smooth muscle is in the submucosa, along with the bronchial glands and cartilage.",s:"Ch. 6 homework"},
+{id:"h604",b:1,u:"mucus",o:"m2",q:"The sol layer can be increased with the administration of which of the following?",c:["Water or saline solution and expectorants","Sympathomimetic bronchodilators and corticosteroids","Anticholinergic medications","Mucolytics"],e:"Water, saline and expectorants increase the depth of the sol layer.",s:"Ch. 6 homework"},
+{id:"h605",b:1,u:"mucus",o:"m3",q:"Pulmozyme® is used for which of the following conditions?",c:["Cystic fibrosis","Heart failure","COPD","Asthma"],e:"Pulmozyme (dornase alfa) manages the viscous secretions of cystic fibrosis.",s:"Ch. 6 homework"},
+{id:"h606",b:1,u:"mucus",o:"m8",q:"Which explains why a patient may be hyperoxemic and hypocapnic following surfactant administration?",c:["Increase in VT due to improved lung compliance","Increase in ventilating pressure","Increase in respiratory rate","Increase in heart rate"],e:"Compliance improves after surfactant, so tidal volumes rise and more CO₂ is blown off. Wean pressures and FiO₂.",s:"Ch. 6 homework"},
+{id:"h701",b:1,u:"steroids",o:"s6",q:"What classification of medication would you give to prevent degranulation of the mast cell?",c:["Mast cell stabilizers","Leukotriene modifiers","Calcium channel blockers","Adrenergics"],e:"Mast cell stabilizers (cromolyn, nedocromil) prevent mast cell degranulation.",s:"Ch. 7 homework"},
+{id:"h702",b:1,u:"steroids",o:"s6",q:"Which term refers to the release of chemical mediators from the mast cell?",c:["Degranulation","Sensitization","Inflammation","Degradation"],e:"Degranulation is the mast cell rupturing and releasing histamine and other mediators. Sensitization is IgE attaching after the first exposure.",s:"Ch. 7 homework"},
+{id:"h703",b:1,u:"steroids",o:"s6",q:"True or false: IgE is the most common immunoglobulin.",c:["False","True"],e:"IgG is the most common (80% of plasma immunoglobulins, Table 7–1). IgE is the antibody most associated with allergic reactions.",s:"Ch. 7 homework"},
+{id:"h704",b:1,u:"steroids",o:"s1",q:"All of the following occur with administration of exogenous corticosteroids EXCEPT:",c:["Hypothalamic stimulation causing CRF to be released","Dependence on pharmacologic corticosteroids","HPA suppression","Adrenal gland atrophy"],e:"High steroid levels turn OFF the hypothalamus (negative feedback), so CRF release is suppressed, not stimulated.",s:"Ch. 7 homework"},
+{id:"h705",b:1,u:"steroids",o:"s3",q:"Common side effects of corticosteroids include: I) Stomach irritation II) Headache III) Mood swings IV) Decreased appetite",c:["I, II, and III","I, II, III, and IV","IV only","I and IV"],e:"Steroids cause stomach irritation, headache and mood swings, and INCREASE appetite.",s:"Ch. 7 homework"},
+{id:"h706",b:1,u:"steroids",o:"s2",q:"True or false: Rinsing will NOT prevent thrush after an inhaled corticosteroid.",c:["False","True"],e:"Rinsing and spitting (plus a spacer) after each dose helps prevent thrush.",s:"Ch. 7 homework"},
+
+/* ---------- Built from textbook Ch. 6–7 ---------- */
+{id:"tb01",b:2,u:"mucus",o:"m6",q:"About how fast do healthy cilia beat?",c:["~1,000 times per minute","~10 times per minute","~100 times per hour","~10,000 times per second"],e:"About 200 cilia per cell, ~6 µm long, beat ~1,000×/min and move mucus ~2 cm/min.",s:"Textbook 6.1a"},
+{id:"tb02",b:2,u:"mucus",o:"m6",q:"Where in the lung are there NO cilia or mucus?",c:["From the respiratory bronchioles to the alveoli","The trachea","The main-stem bronchi","The nasopharynx"],e:"The mucociliary escalator ends at the terminal bronchi. The respiratory zone has neither cilia nor mucus.",s:"Textbook 6.1a"},
+{id:"tb03",b:2,u:"mucus",o:"m6",q:"Which layer of the mucus blanket works “like flypaper” to trap particles and bacteria?",c:["Gel layer (1–2 µm, on top)","Sol layer (4–8 µm, underneath)","Basement membrane","Submucosa"],e:"The sticky gel layer floats on the watery sol layer, where the cilia beat.",s:"Textbook 6.1b"},
+{id:"tb04",b:2,u:"mucus",o:"m6",q:"Which drug is named in the textbook as slowing ciliary beating?",c:["Atropine","Albuterol","Dornase alfa","Guaifenesin"],e:"Other cilia slowers: thick mucus, dry gas, smoke, noxious gases, infection, positive-pressure ventilation, ETTs, high O₂.",s:"Textbook 6.1b"},
+{id:"tb05",b:2,u:"mucus",o:"m6",q:"Which is NOT listed as a factor that dehydrates and thickens mucus?",c:["Bradypnea (slow breathing)","Increased respiratory rate","Increased depth of breathing","Infection"],e:"Increased rate and depth of breathing, systemic fluid loss and infection all dry and thicken mucus.",s:"Textbook 6.1b"},
+{id:"tb06",b:2,u:"mucus",o:"m3",q:"Why is routine saline instillation during suctioning discouraged?",c:["It barely thins secretions, only ~20% is recovered, and it washes ETT bacteria into the lungs (pneumonia risk)","It causes adrenal suppression","It thickens the gel layer","It is too expensive"],e:"Its main benefit is triggering a vigorous cough, so reserve it for patients who don’t cough adequately during suctioning.",s:"Textbook 6.2b"},
+{id:"tb07",b:2,u:"mucus",o:"m1",q:"Bland aerosols are also called:",c:["Wetting agents","Mucolytics","Surface-active agents","Antitussives"],e:"Water, normal, hypotonic and hypertonic saline are wetting agents. They dilute mucus rather than altering its molecular structure.",s:"Textbook 6.2a"},
+{id:"tb08",b:2,u:"mucus",o:"m3",q:"About how much of a 3–5 ml SVN treatment actually deposits in the lung?",c:["About 1 ml","All of it","About 3 ml","None"],e:"That small deposition is why SVNs are used for drugs and sputum induction, not bulk hydration.",s:"Textbook 6.2b"},
+{id:"tb09",b:2,u:"mucus",o:"m4",q:"Which acetylcysteine strength is LESS likely to cause bronchospasm?",c:["10%","20%","They are equal","Neither causes bronchospasm"],e:"The 10% causes less, but its 6–10 ml dose overfills most SVNs. Most clinicians use 20% after a bronchodilator.",s:"Textbook 6.3a"},
+{id:"tb10",b:2,u:"mucus",o:"m3",q:"Acetylcysteine causes bronchospasm partly because of its:",c:["Low pH (2.2)","High pH","Isotonicity","DNA content"],e:"Its acidity irritates the airway, most often in reactive airways but possibly in anyone.",s:"Textbook 6.3a"},
+{id:"tb11",b:2,u:"mucus",o:"m3",q:"After an acetylcysteine treatment, which precaution is most important?",c:["Have the patient cough or be suctioned; liquefied mucus can plug the airways","Keep the patient flat and quiet","Give an antitussive","Withhold fluids"],e:"Monitor breath sounds and keep suction available for patients who can’t cough effectively. Also rinse the mouth and the nebulizer (it’s corrosive to metal).",s:"Textbook 6.3a"},
+{id:"tb12",b:2,u:"mucus",o:"m4",q:"A dornase alfa ampule was left on the counter for 30 hours. What should you do?",c:["Discard it","Use it; room temperature doesn’t matter","Refrigerate it and use it tomorrow","Dilute it with saline"],e:"Discard dornase that has been at room temperature >24 h or looks discolored.",s:"Textbook 6.3a"},
+{id:"tb13",b:2,u:"mucus",o:"m4",q:"Which CF patient may benefit from twice-daily dornase alfa?",c:["Patients older than 21 with FVC >85% predicted","All children under 5","Patients with FVC <40%","No one; it’s never given twice daily"],e:"The standard dose is 2.5 mg once daily; further analysis suggested BID may help this group.",s:"Textbook 6.3a"},
+{id:"tb14",b:2,u:"mucus",o:"m3",q:"Dornase alfa is contraindicated in patients hypersensitive to:",c:["Chinese hamster ovary cell products","Sulfa drugs","Eggs","Latex"],e:"Dornase is produced in Chinese hamster ovary cells. Its side effects are minimal (voice change, pharyngitis, laryngitis, rash, chest pain, conjunctivitis).",s:"Textbook 6.3a"},
+{id:"tb15",b:2,u:"mucus",o:"m7",q:"Where is the cough center that antitussives depress?",c:["Medulla","Cerebellum","Carina","Adrenal cortex"],e:"Codeine (opioid) and dextromethorphan (non-opioid) depress the medullary cough center.",s:"Textbook 6.3c"},
+{id:"tb16",b:2,u:"mucus",o:"m7",q:"Per the textbook, the simplest way to preserve mucus clearance is to:",c:["Drink plenty of non-diuretic fluids (avoid tea and alcohol)","Take guaifenesin every 4 hours","Use an antitussive at night","Breathe dry oxygen"],e:"Evidence for expectorants is weak, while systemic hydration keeps mucus at the right consistency.",s:"Textbook 6.3b"},
+{id:"tb17",b:2,u:"mucus",o:"m8",q:"Which surfactant protein is critical to the surface-tension-lowering property of surfactant?",c:["SP-B","SP-A","SP-D","SP-E"],e:"SP-B lowers surface tension, SP-C helps spreading, and SP-A and SP-D are host defense.",s:"Textbook 6.4a"},
+{id:"tb18",b:2,u:"mucus",o:"m8",q:"Surfactant is produced by:",c:["Type II pneumocytes","Type I pneumocytes","Goblet cells","Alveolar macrophages"],e:"Type II cells store surfactant in lamellar bodies and recycle 90–95% of it. Type I cells make up ~93% of the surface for gas exchange.",s:"Textbook 6.4a"},
+{id:"tb19",b:2,u:"mucus",o:"m8",q:"Surfactant given within minutes of birth to a 25-week infant before RDS develops is called:",c:["Prophylactic treatment","Rescue treatment","Maintenance therapy","Salvage therapy"],e:"Prophylactic treatment is for very premature infants (<26–27 weeks). Rescue treatment is for infants already showing RDS.",s:"Textbook 6.4e"},
+{id:"tb20",b:2,u:"mucus",o:"m8",q:"Which surfactant is synthetic?",c:["Lucinactant (Surfaxin)","Beractant (Survanta)","Calfactant (Infasurf)","Poractant alfa (Curosurf)"],e:"Natural surfactants act faster and have lower mortality, so they’re favored.",s:"Textbook 6.4f"},
+{id:"tb21",b:2,u:"mucus",o:"m8",q:"How is a surfactant dose usually divided and given?",c:["4 aliquots via the ETT, 2 with the infant turned right and 2 turned left","One rapid IV push","By SVN over 10 minutes","Orally"],e:"The ETT must sit above the carina, and the infant is suctioned first.",s:"Textbook 6.4g"},
+{id:"tb22",b:2,u:"mucus",o:"m8",q:"Which complication can occur AFTER surfactant administration?",c:["Patent ductus arteriosus","Reflux of solution","Transient decrease in oxygenation","Bradycardia during instillation"],e:"After: hyperoxygenation, hyperventilation (↓ PaCO₂), PDA. The other options happen during administration.",s:"Textbook 6.4h"},
+{id:"tb23",b:2,u:"mucus",o:"m4",q:"Poractant alfa (Curosurf): what are the repeat doses after the 2.5 ml/kg initial dose?",c:["Up to 2 doses of 1.25 ml/kg, 12 h apart","4 ml/kg every 6 h","3 ml/kg every 12 h","None allowed"],e:"Survanta: 4 ml/kg q6h ×4. Infasurf: 3 ml/kg q12h ×3. Curosurf: 2.5 then 1.25 ml/kg q12h ×2.",s:"Textbook 6.4f"},
+{id:"tb24",b:2,u:"steroids",o:"s6",q:"Which immunoglobulin is most common in plasma?",c:["IgG","IgE","IgA","IgM"],e:"IgG makes up 80% of plasma immunoglobulins. IgE is the allergy antibody bound to mast cells.",s:"Textbook Table 7–1"},
+{id:"tb25",b:2,u:"steroids",o:"s6",q:"Which immunoglobulin is found mainly in mucous membranes and bronchial secretions?",c:["IgA","IgG","IgD","IgE"],e:"IgA protects mucous membranes and passes immunity to the child.",s:"Textbook Table 7–1"},
+{id:"tb26",b:2,u:"steroids",o:"s6",q:"According to the textbook, the late-phase asthmatic response develops about how long after exposure?",c:["6–8 hours","5–10 minutes","2–3 days","2 weeks"],e:"The late phase is difficult to resolve, which is why early anti-inflammatory therapy is used.",s:"Textbook 7.1d"},
+{id:"tb27",b:2,u:"steroids",o:"s6",q:"Arachidonic acid from a degranulated mast cell feeds which two pathways?",c:["Lipoxygenase (leukotrienes) and cyclooxygenase (prostaglandins)","Glycolysis and the Krebs cycle","The HPA axis and the RAAS","cAMP and cGMP"],e:"Both pathways add to late-phase edema, mucus and hyperreactivity.",s:"Textbook 7.1d"},
+{id:"tb28",b:2,u:"steroids",o:"s1",q:"Which hormone does the anterior pituitary release to stimulate the adrenal cortex?",c:["ACTH","CRF","Aldosterone","Epinephrine"],e:"Hypothalamus → CRF → anterior pituitary → ACTH → adrenal cortex → corticosteroids.",s:"Textbook 7.2b"},
+{id:"tb29",b:2,u:"steroids",o:"s1",q:"Per the textbook, a corticosteroid course of up to how long can usually be stopped without a taper?",c:["About 3 weeks","3 months","1 year","No course can stop without a taper"],e:"Longer or higher-dose courses taper about 10–20% every 1–2 weeks.",s:"Textbook 7.2b"},
+{id:"tb30",b:2,u:"steroids",o:"s1",q:"Which oral corticosteroid has the strongest glucocorticoid effect and no mineralocorticoid effect?",c:["Dexamethasone","Hydrocortisone","Prednisone","Cortisone"],e:"Dexamethasone is 20–40 vs hydrocortisone 1 (Table 7–2).",s:"Textbook Table 7–2"},
+{id:"tb31",b:2,u:"steroids",o:"s4",q:"Why might methylprednisolone be preferred over hydrocortisone in a patient with heart disease?",c:["Less mineralocorticoid effect → less fluid retention","It is a bronchodilator","It is cheaper","It works in 5 minutes"],e:"Methylprednisolone (Solu-Medrol) has 0–0.8 mineralocorticoid activity vs 1 for hydrocortisone.",s:"Textbook 7.2f"},
+{id:"tb32",b:2,u:"steroids",o:"s1",q:"When do natural (endogenous) corticosteroid levels peak?",c:["About 8 a.m.","Midnight","Noon","They stay constant"],e:"Diurnal rhythm: 10–30 mg/day, peaking around 8 a.m. (reversed for night-shift workers).",s:"Textbook 7.2a"},
+{id:"tb33",b:2,u:"steroids",o:"s2",q:"A patient on an ICS has hoarseness. Which change is MOST likely to help?",c:["Switching to a dry-powder inhaler","Adding a spacer","Gargling with saline only","Taking it at bedtime"],e:"Dysphonia usually isn’t reduced by a spacer but may be lowered with a DPI. (A spacer and rinsing DO help thrush.)",s:"Textbook 7.2g"},
+{id:"tb34",b:2,u:"steroids",o:"s3",q:"Steroid withdrawal syndrome includes all EXCEPT:",c:["Hypertension","Anorexia and nausea","Lethargy and headache","Hypotension"],e:"Withdrawal from HPA suppression causes HYPOtension, along with anorexia, nausea, vomiting, lethargy and headache.",s:"Textbook 7.2i"},
+{id:"tb35",b:2,u:"steroids",o:"s4",q:"In the ED, when are systemic corticosteroids warranted for asthma?",c:["When the response to β-agonists is poor over 1–2 hours","Only after 24 hours","Never; only ICS are used","Before any bronchodilator is tried"],e:"Because of the delayed onset, many clinicians start steroids early to blunt the late-phase response.",s:"Textbook 7.2f"},
+{id:"tb36",b:2,u:"steroids",o:"s6",q:"How does cromolyn prevent mast cell degranulation?",c:["Inhibits calcium influx into the mast cell","Blocks H1 receptors","Digests histamine","Raises blood glucose"],e:"Calcium influx is needed for the microfilament contraction that expels mast cell contents.",s:"Textbook 7.3a"},
+{id:"tb37",b:2,u:"steroids",o:"s6",q:"How long should a patient try nebulized cromolyn before judging whether it works?",c:["4–6 weeks","1 day","1 week","6 months"],e:"A positive response is fewer or less severe asthma episodes.",s:"Textbook 7.3b"},
+{id:"tb38",b:2,u:"steroids",o:"s6",q:"Why is cromolyn given only by inhalation?",c:["It is poorly absorbed from the GI tract","It is destroyed by light","It causes thrush orally","It is too potent orally"],e:"It must be deposited directly in the airways. Nebulized cromolyn is compatible with β-agonist solutions.",s:"Textbook 7.3b"},
+{id:"tb39",b:2,u:"steroids",o:"s6",q:"Which prostaglandin is most common in the lung and causes bronchoconstriction?",c:["PGF2α","PGE1","PGE2","PGI2"],e:"PGF2α also increases mucus and vascular resistance. PGE1 and PGE2 cause bronchodilation.",s:"Textbook 7.4a"},
+{id:"tb40",b:2,u:"steroids",o:"s6",q:"An asthmatic wheezes after taking ibuprofen for a headache. The best explanation is:",c:["Aspirin/NSAID-sensitive asthma: NSAIDs inhibit prostaglandin synthesis","An antihistamine reaction","Steroid withdrawal","Cromolyn toxicity"],e:"Aspirin-sensitive asthmatics may rely on the prostaglandin mechanism rather than the β system for airway tone.",s:"Textbook 7.4a"},
+{id:"tb41",b:2,u:"steroids",o:"s5",q:"Zafirlukast has a clinically important interaction with:",c:["Warfarin (↑ prothrombin time)","Albuterol","Cromolyn","Acetaminophen"],e:"Zafirlukast is also taken on an empty stomach and may decrease liver function.",s:"Textbook 7.5a"},
+{id:"tb42",b:2,u:"steroids",o:"s5",q:"A patient shows no improvement after 1 month on a leukotriene modifier. What is the next step?",c:["Classify as a nonresponder and switch to another controller","Double the dose indefinitely","Use it as a rescue drug instead","Add a second leukotriene modifier"],e:"Response varies with how much leukotrienes drive each patient’s asthma.",s:"Textbook 7.5a"},
+{id:"tb43",b:2,u:"steroids",o:"s6",q:"Omalizumab (Xolair) works by:",c:["Preventing IgE from binding to mast cells and basophils","Blocking leukotriene receptors","Stabilizing mast cells by blocking calcium","Blocking IL-5"],e:"It is given SC, dosed by weight and IgE level, for moderate–severe allergic asthma uncontrolled on ICS + LABA. Most common side effect: injection-site reactions.",s:"Textbook 7.6a"},
+{id:"tb44",b:2,u:"steroids",o:"s6",q:"Mepolizumab and benralizumab reduce which cell by targeting the IL-5 pathway?",c:["Eosinophils","Red blood cells","Platelets","Type II pneumocytes"],e:"IL-5 drives eosinophil growth, recruitment and survival. These drugs are reserved for patients who fail traditional therapy.",s:"Textbook 7.6a"},
+{id:"tb45",b:2,u:"steroids",o:"s6",q:"Cimetidine (Tagamet) is best described as:",c:["An H2 blocker (not an antihistamine)","A first-generation antihistamine","A mast cell stabilizer","A decongestant"],e:"Antihistamines block H1 receptors. H2 blockers act on gastric secretion.",s:"Textbook 7.7c"},
+{id:"tb46",b:2,u:"steroids",o:"s6",q:"Why are first-generation antihistamines avoided in children and the elderly?",c:["CNS impairment (school performance) and anticholinergic effects (blurred vision, confusion, urinary hesitancy)","They cause thrush","They raise blood sugar","They are too expensive"],e:"Second-generation antihistamines are now the preferred agents.",s:"Textbook 7.7c"},
+{id:"tb47",b:2,u:"steroids",o:"s6",q:"For how many consecutive days can a topical nasal decongestant be used before rebound congestion?",c:["3 days","3 weeks","3 months","There is no limit"],e:"Decongestants are α-adrenergic vasoconstrictors. With phenylephrine, use caution in diabetes, heart disease, hyperthyroidism and glaucoma, and watch BP.",s:"Textbook 7.7d"},
+{id:"tb48",b:2,u:"steroids",o:"s6",q:"Intranasal cromolyn is effective for all of these allergic rhinitis symptoms EXCEPT:",c:["Pre-existing nasal congestion","Sneezing","Rhinorrhea","Itching"],e:"Intranasal cromolyn should be started before pollen season, used 3–4×/day, and takes 2–4 weeks for full effect.",s:"Textbook 7.7b"},
 /* ---------- Chapter 7 review (allergy, cromolyn, antihistamines) ---------- */
 {id:"r701",b:1,u:"steroids",o:"s6",q:"The most common antibody involved in allergic asthma and rhinitis is:",c:["IgE","IgG","IgF","IgT"],e:"IgE sits on mast cells. When an allergen cross-links it, the mast cell releases histamine and other mediators. (IgF, IgT and IgB don’t exist.)",s:"Chapter 7 review · #1"},
 {id:"r702",b:1,u:"steroids",o:"s1",q:"Corticosteroids can be classified as:",c:["Both mineralocorticoid and glucocorticoid","Mineralocorticoid only","Potassium sparing","Glucose sparing"],e:"The two classes are mineralocorticoids (salt and water) and glucocorticoids (anti-inflammatory).",s:"Chapter 7 review · #2"},
@@ -257,7 +326,7 @@ const Q = [
 {id:"r707",b:1,u:"steroids",o:"s6",q:"Which effect relates MOST closely to β-agonists?",c:["Block histamine release","Block histamine production","Block H₁ receptors","Digest histamine"],e:"β-agonists raise mast-cell cAMP, which inhibits degranulation (release). Their main job is still bronchodilation.",s:"Chapter 7 review · #5"},
 {id:"r708",b:1,u:"steroids",o:"s6",q:"Which effect relates MOST closely to cromolyn sodium?",c:["Blocks histamine release","Blocks histamine production","Blocks H₁ receptors","Increases β-receptor numbers"],e:"Cromolyn stabilizes the mast cell membrane so it doesn’t degranulate and release its mediators.",s:"Chapter 7 review · #5"},
 {id:"r709",b:1,u:"steroids",o:"s6",q:"Which effect relates MOST closely to corticosteroids?",c:["Block histamine (mediator) production","Block histamine release only","Block H₁ receptors","Act as bronchodilators"],e:"Corticosteroids work upstream: they reduce mediator synthesis and inflammatory cells. Remember “release vs production.”",s:"Chapter 7 review · #5"},
-{id:"r710",b:1,u:"steroids",o:"s6",q:"Which statement about the early and late phases of allergic inflammation is correct?",c:["Early phase occurs within minutes from mast-cell mediators; late phase develops hours later (~4–8 h) with eosinophils and other inflammatory cells","Early phase is caused by eosinophils; late phase by histamine","Both phases happen within 5 minutes","The late phase is relieved completely by albuterol"],e:"SABAs treat the early bronchospasm. Anti-inflammatories (corticosteroids, or cromolyn given beforehand) are needed for the late phase.",s:"Chapter 7 review · #6"},
+{id:"r710",b:1,u:"steroids",o:"s6",q:"Which statement about the early and late phases of allergic inflammation is correct?",c:["Early phase occurs within minutes from mast-cell mediators; late phase develops hours later (6–8 h) with eosinophils and other inflammatory cells","Early phase is caused by eosinophils; late phase by histamine","Both phases happen within 5 minutes","The late phase is relieved completely by albuterol"],e:"SABAs treat the early bronchospasm. Anti-inflammatories (corticosteroids, or cromolyn given beforehand) are needed for the late phase.",s:"Chapter 7 review · #6"},
 {id:"r711",b:1,u:"steroids",o:"s6",q:"Why does the late phase of allergic inflammation matter for drug choice?",c:["A rescue bronchodilator treats only the early phase. Without an anti-inflammatory, the patient worsens hours later and BHR increases","The late phase only responds to antihistamines","The late phase is harmless","Antibiotics prevent the late phase"],e:"This is why persistent allergic asthma needs a controller (ICS) and not just albuterol.",s:"Chapter 7 review · #6"},
 {id:"r712",b:1,u:"steroids",o:"s1",q:"Which is the best lay explanation of why a patient must not suddenly stop long-term prednisone?",c:["“Your adrenal glands have been resting because of the pills; if you stop suddenly, your body won’t have enough of its own steroid hormone until they wake up, which can be dangerous.”","“Prednisone is addictive, so you’ll crave it.”","“Stopping will make your lungs scar.”","“Prednisone stays in your body for months, so stopping doesn’t matter.”"],e:"HPA suppression → adrenal atrophy → adrenal crisis if stopped abruptly. Taper slowly.",s:"Chapter 7 review · #7"},
 {id:"r713",b:1,u:"steroids",o:"s6",q:"Which factor INHIBITS mediator release from mast cells?",c:["Increased intracellular cAMP (e.g., from β-agonists)","Allergen cross-linking of IgE","Increased cGMP from cholinergic stimulation","Calcium influx into the mast cell"],e:"↑ cAMP stabilizes mast cells. Allergen–IgE cross-linking, ↑ cGMP and calcium influx all promote release.",s:"Chapter 7 review · #8"},
@@ -266,7 +335,7 @@ const Q = [
 {id:"r716",b:1,u:"steroids",o:"s2",q:"A 57-year-old asthmatic has hoarseness, white spots on his throat and tongue, and a “funny taste.” Which medication and route are most likely responsible?",c:["An inhaled corticosteroid","An oral leukotriene modifier","A nebulized SABA","An intranasal antihistamine"],e:"Dysphonia and oropharyngeal candidiasis are classic ICS local side effects from drug deposited in the mouth and throat.",s:"Chapter 7 review · #10"},
 {id:"r717",b:1,u:"steroids",o:"s2",q:"For the patient with ICS-related thrush and hoarseness, which plan is best?",c:["Antifungal treatment per prescriber, add a spacer, rinse/gargle and spit after every dose, check technique and dose, and follow up","Stop the ICS permanently","Switch to daily oral prednisone","Double the ICS dose"],e:"Keep the controller and reduce oropharyngeal deposition. Thrush risk is dose-related, so use the lowest effective dose.",s:"Chapter 7 review · #10"},
 {id:"r718",b:1,u:"steroids",o:"s6",q:"A patient uses albuterol, an inhaled corticosteroid and cromolyn each morning. What is the best sequence?",c:["Albuterol → cromolyn → inhaled corticosteroid (then rinse)","Inhaled corticosteroid → cromolyn → albuterol","Cromolyn → albuterol → corticosteroid","Order doesn’t matter"],e:"Open the airways first so the controllers deposit deeper. Give the ICS last so the patient can rinse afterward.",s:"Chapter 7 review · #11"},
-{id:"r719",b:1,u:"steroids",o:"s6",q:"In lay terms, when is cromolyn indicated?",c:["“Every day and before your triggers (like exercise or allergens) to keep attacks from starting; it won’t stop an attack once it begins.”","“Only when you’re wheezing.”","“Once a month.”","“Only in the emergency room.”"],e:"Cromolyn is prophylactic. Its full benefit builds over 2–4 weeks of regular use.",s:"Chapter 7 review · #11"},
+{id:"r719",b:1,u:"steroids",o:"s6",q:"In lay terms, when is cromolyn indicated?",c:["“Every day and before your triggers (like exercise or allergens) to keep attacks from starting; it won’t stop an attack once it begins.”","“Only when you’re wheezing.”","“Once a month.”","“Only in the emergency room.”"],e:"Cromolyn is prophylactic. Give it a 4–6 week trial of regular use (textbook).",s:"Chapter 7 review · #11"},
 
 {id:"x701",b:2,u:"steroids",o:"s6",q:"Cromolyn sodium is classified as a:",c:["Mast cell stabilizer","Leukotriene receptor antagonist","Corticosteroid","β₂-agonist"],e:"It prevents mast-cell degranulation, so mediators aren’t released.",s:"Built from chapter 7"},
 {id:"x702",b:2,u:"steroids",o:"s6",q:"A child with exercise-induced asthma is prescribed cromolyn. When should it be taken relative to soccer practice?",c:["Shortly before exercise (about 10–60 minutes)","Only after symptoms start","The night after practice","Once a week"],e:"Cromolyn must be on board before the trigger to block mast-cell release.",s:"Built from chapter 7"},
@@ -353,7 +422,7 @@ const Q = [
 {id:"rA03",b:1,u:"mucus",o:"m6",q:"In which layer of the airways are cilia found?",c:["Mucosa","Submucosa","Adventitia","Endothelium"],e:"Ciliated epithelial cells (with goblet cells) make up the epithelium of the mucosa, the innermost layer lining the airway lumen.",s:"Review set 1 · #3"},
 {id:"rA04",b:1,u:"mucus",o:"m2",q:"Ciliary activity is improved by which of the following?",c:["Sympathomimetic bronchodilators and corticosteroids","Water or saline solution and expectorants","Mucolytics","Anticholinergic medications"],e:"Improving ciliary activity is one of the three approaches to secretion management, achieved with sympathomimetic bronchodilators and corticosteroids.",s:"Review set 1 · #4"},
 {id:"rA05",b:1,u:"mucus",o:"m2",q:"The gel layer is affected most by the administration of which of the following?",c:["Mucolytics","Water or saline solution and expectorants","Sympathomimetic bronchodilators and corticosteroids","Anticholinergic medications"],e:"Mucolytics alter the consistency of the gel layer, while water/saline and expectorants increase the depth of the sol layer.",s:"Review set 1 · #5"},
-{id:"rA06",b:1,u:"mucus",o:"m6",q:"The volume or thickness of mucus can be increased by which of the following?",c:["Infection","Dehydration","Chronic bronchitis","Endotracheal tubes"],e:"Infection increases both the amount of mucus and its thickness (inflammatory cells, DNA and debris make it purulent). Note: answer keys vary on this item. Chronic bronchitis also raises volume and dehydration raises thickness, so check your instructor’s key.",s:"Review set 1 · #6"},
+{id:"rA06",b:1,u:"mucus",o:"m6",q:"The volume or thickness of mucus can be increased by which of the following?",c:["Chronic bronchitis","Dehydration","Infection","Endotracheal tubes"],e:"The textbook names chronic bronchitis (with CF and pneumonia) as a disease that increases mucus, and Figure 6–3 (“Diseases That Increase the Volume and/or Thickness of Mucus”) shows it. Dehydration and infection also thicken mucus, so check your instructor’s key.",s:"Review set 1 · #6"},
 {id:"rA07",b:1,u:"mucus",o:"m2",q:"Which of the following is NOT a means of secretion management?",c:["Increasing the number of bronchial glands","Improving ciliary action","Increasing the depth of the sol layer","Altering the consistency of the gel layer"],e:"The three approaches are altering gel-layer consistency, increasing sol-layer depth, and improving ciliary activity. More bronchial glands means MORE mucus, which is a disease change.",s:"Review set 1 · #7"},
 {id:"rA08",b:1,u:"mucus",o:"m6",q:"Repeated, prolonged exposure to irritants causes all of the following airway changes EXCEPT:",c:["Decreased mucus production","Increased number of bronchial glands","Increased size of bronchial glands","Decreased ciliary action"],e:"Chronic irritation (e.g., smoking) causes gland hyperplasia and hypertrophy, more mucus and impaired cilia, so mucus production goes UP.",s:"Review set 1 · #8"},
 {id:"rA09",b:1,u:"mucus",o:"m6",q:"Which would NOT occur after inserting an endotracheal tube?",c:["Improved ciliary action","Accumulation of mucus in the lungs","Infection","Impaired ciliary action"],e:"An ETT impairs ciliary action and cough, so mucus accumulates and infection risk rises. It never improves ciliary function.",s:"Review set 1 · #9"},
@@ -390,7 +459,7 @@ const Q = [
 {id:"rD05",b:1,u:"mucus",o:"m8",q:"During surfactant replacement, monitor for which hazards? I) Improved lung compliance II) Transient decrease in oxygenation III) Reflux of solution IV) Bradycardia",c:["II, III, and IV","I, II, III, and IV","I and II","I and III"],e:"Instillation can cause transient desaturation, bradycardia and reflux of surfactant up the ETT. Improved compliance is the desired EFFECT (though it means ventilator settings must be weaned quickly).",s:"Chapter review · #5"},
 {id:"rD06",b:1,u:"mucus",o:"m6",q:"Which list gives four functions of mucus in a healthy pulmonary system?",c:["Traps and removes particles/pathogens, protects the epithelium (barrier), humidifies inspired air, and limits water loss across the epithelium","Exchanges O₂ and CO₂, lowers surface tension, dilates bronchi, and stimulates cough","Digests bacteria, produces surfactant, warms blood, and filters CO₂","Constricts airways, increases resistance, absorbs drugs, and slows cilia"],e:"For a written answer, you can list: protective barrier, trapping and clearing particles/microbes (mucociliary escalator), humidifying inspired gas, lubrication, and preventing water loss/waterproofing.",s:"Chapter review · #6"},
 {id:"rD07",b:1,u:"mucus",o:"m4",q:"What is the typical aerosol dose range for acetylcysteine, and how can it be delivered?",c:["3–5 ml of 20% (or 6–10 ml of 10%) by nebulizer 3–4 times daily; or 1–2 ml of 10–20% by direct instillation","2.5 mg once daily by jet nebulizer only","0.5 ml of 0.5% in 3 ml saline every 4 hours","600 mg orally once weekly"],e:"NAC comes as 10% (100 mg/ml) and 20% (200 mg/ml). It is given by SVN, usually with a bronchodilator, or instilled directly into an artificial airway.",s:"Chapter review · #7"},
-{id:"rD08",b:1,u:"mucus",o:"m4",q:"Which is best to prevent bronchospasm in a patient ordered nebulized acetylcysteine?",c:["Add 2.5 mg of albuterol to the acetylcysteine","Give 2 puffs of salmeterol before the acetylcysteine","Give 2.5 mg of albuterol after the acetylcysteine","Pretreat with 2.5 mg of albuterol by nebulizer 20 minutes before the acetylcysteine"],e:"NAC is compatible with albuterol, so mixing them gives bronchodilator coverage during the treatment. Salmeterol is too slow, and giving albuterol after is too late. (Some instructors also accept bronchodilator pretreatment, so check your key.)",s:"Chapter review · #8"},
+{id:"rD08",b:1,u:"mucus",o:"m4",q:"Which is best to prevent bronchospasm in a patient ordered nebulized acetylcysteine?",c:["Pretreat with 2.5 mg of albuterol by nebulizer 20 minutes before the acetylcysteine","Give 2 puffs of salmeterol before the acetylcysteine","Add 2.5 mg of albuterol to the acetylcysteine","Give 2.5 mg of albuterol after the acetylcysteine"],e:"The textbook says to give the bronchodilator BEFORE the acetylcysteine, because even albuterol takes ~15 minutes to start working (peak 30–60 min). Salmeterol is too slow, and giving albuterol after is too late.",s:"Chapter review · #8"},
 {id:"rD09",b:1,u:"mucus",o:"m8",q:"You are preparing beractant for an 800 g male with RDS. What is the appropriate dose?",c:["3.2 ml","4 ml","5 ml","2 ml"],e:"Beractant (Survanta) is 4 ml/kg. 800 g = 0.8 kg, and 0.8 × 4 = 3.2 ml.",s:"Chapter review · #9"},
 {id:"rD10",b:1,u:"mucus",o:"m8",q:"Critical functions of surfactant: I) improves oxygenation II) prevents alveolar collapse III) reduces risk of intrapulmonary hemorrhage IV) decreases work of breathing",c:["I, II, and IV","I only","I and II","I, II, III, and IV"],e:"Surfactant lowers alveolar surface tension, which prevents collapse, improves oxygenation and decreases WOB. It does NOT reduce hemorrhage risk; pulmonary hemorrhage is a potential complication of surfactant therapy.",s:"Chapter review · #10"},
 {id:"rD11",b:1,u:"mucus",o:"m8",q:"What is the primary indication for surfactant replacement therapy?",c:["Respiratory distress syndrome (RDS)","Pneumonia","Meconium aspiration","Pulmonary hemorrhage"],e:"RDS of the premature newborn is caused by surfactant deficiency. Surfactant is given for prevention (prophylaxis) or rescue.",s:"Chapter review · #11"},
@@ -548,14 +617,14 @@ const CASES = [
  {q:"What should follow-up include?",c:["Checking that the thrush has cleared, his voice has improved, his technique is correct and his asthma remains controlled","Nothing; these problems never recur","Checking sweat chloride","Liver enzymes"],e:"Education plus follow-up prevents recurrence while keeping asthma controlled."}
 ]},
 {id:"c74",ws:1,u:"steroids",title:"Chapter 7 Case — Three inhalers, one routine",who:"Adult with severe late-phase asthma responses",text:"A patient with a history of severe late-phase asthma responses is prescribed an inhaled short-acting bronchodilator, an inhaled corticosteroid and a mast cell stabilizer (cromolyn). The patient asks you to explain, in plain language, when to use each one.",
- answer:{med:"Short-acting bronchodilator (albuterol): rescue for sudden symptoms, and first in the routine to open the airways. Mast cell stabilizer (cromolyn): every day and before known triggers, to keep attacks from starting. Inhaled corticosteroid: every day, last in the routine, then rinse, gargle and spit. Order: bronchodilator → cromolyn → ICS.",why:"Late-phase reactions are driven by inflammatory cells hours after exposure; a bronchodilator alone only treats the early bronchospasm. Cromolyn prevents mast cells from releasing mediators (blunting both phases if taken beforehand), and the ICS suppresses ongoing inflammation and late-phase responses. Giving the bronchodilator first opens the airways so the controllers reach deeper, and giving the ICS last lets the patient rinse away throat deposits. Side effects to mention: albuterol shakiness and fast heartbeat; cromolyn mild cough or throat irritation; ICS thrush and hoarseness. Expected benefits build over weeks: fewer and milder attacks, less rescue use, better sleep and steadier peak flows."},
+ answer:{med:"Short-acting bronchodilator (albuterol): rescue for sudden symptoms, and first in the routine to open the airways. Mast cell stabilizer (cromolyn): every day and before known triggers, to keep attacks from starting. Inhaled corticosteroid: every day, last in the routine, then rinse, gargle and spit. Order: bronchodilator → cromolyn → ICS.",why:"Late-phase reactions are driven by inflammatory cells hours after exposure; a bronchodilator alone only treats the early bronchospasm. Cromolyn prevents mast cells from releasing mediators (blunting both phases if taken beforehand), and the ICS suppresses ongoing inflammation and late-phase responses. Giving the bronchodilator first opens the airways so the controllers reach deeper, and giving the ICS last lets the patient rinse away throat deposits. Side effects to mention: albuterol shakiness and fast heartbeat; cromolyn mild cough or throat irritation; ICS thrush and hoarseness. Expected benefits build over weeks (cromolyn needs a 4–6 week trial): fewer and milder attacks, less rescue use, better sleep and steadier peak flows."},
  steps:[
  {q:"In plain language, when is the short-acting bronchodilator used?",c:["“For quick relief when you’re wheezing or tight, and first in your daily routine to open your airways.”","“Only once a month.”","“Only after the steroid.”","“Never at home.”"],e:"The SABA is the rescue drug, and it also goes first in the routine."},
  {q:"In plain language, when is cromolyn used?",c:["“Every day, and before your triggers, to stop attacks from starting; it won’t help once an attack has begun.”","“Only during an attack.”","“Once a week.”","“Only if the steroid isn’t working.”"],e:"Cromolyn is a preventive mast cell stabilizer."},
  {q:"In plain language, when is the inhaled corticosteroid used?",c:["“Every day, even when you feel fine, to calm the swelling in your airways; then rinse and spit.”","“Only when you’re short of breath.”","“Only in the fall.”","“As a rescue inhaler.”"],e:"ICS are daily maintenance drugs that control the late-phase inflammation."},
  {q:"What is the correct sequence?",c:["Bronchodilator → cromolyn → inhaled corticosteroid","Corticosteroid → cromolyn → bronchodilator","Cromolyn → corticosteroid → bronchodilator","Any order"],e:"Open the airways first, and give the ICS last so the patient can rinse."},
  {q:"Which side-effect counseling is correct?",c:["Albuterol: shakiness and fast heartbeat. Cromolyn: mild cough or throat irritation. ICS: thrush and hoarseness (prevent with spacer + rinse)","All three cause adrenal crisis","Cromolyn causes Cushing syndrome","Albuterol causes oral thrush"],e:"Each drug has its own side-effect profile, and cromolyn has very few."},
- {q:"What positive outcomes should the patient expect, and when?",c:["Over several weeks: fewer and milder attacks, less rescue-inhaler use, better sleep and steadier peak flows","Complete cure within 24 hours","No change for a year","Immediate relief from the ICS"],e:"Controllers work over weeks (ICS max 4–8 weeks; cromolyn 2–4 weeks)."}
+ {q:"What positive outcomes should the patient expect, and when?",c:["Over several weeks: fewer and milder attacks, less rescue-inhaler use, better sleep and steadier peak flows","Complete cure within 24 hours","No change for a year","Immediate relief from the ICS"],e:"Controllers work over weeks (ICS max 4–8 weeks; cromolyn needs a 4–6 week trial)."}
 ]},
 {id:"wm1",ws:1,u:"mucus",title:"Mucus Case 1 — CF teen with thick, green sputum",who:"15-year-old male · cystic fibrosis",text:"A 15-year-old male with confirmed CF presents for a routine pulmonary clinic visit. His parents report that although he does airway clearance therapy twice daily, his sputum has become increasingly thick, green and tenacious, making it hard to expectorate. Spirometry shows his FEV1 has declined to 65% of predicted. The physician wants to add a mucoactive agent.",
  answer:{med:"Dornase alfa (Pulmozyme) 2.5 mg (one ampule), inhaled undiluted by jet nebulizer once daily, given before airway clearance.",why:"His thick, green (purulent) sputum is full of extracellular DNA released by dead neutrophils, and that DNA makes the sputum much more viscous. Dornase alfa is recombinant human DNase I: it digests the extracellular DNA, lowering viscosity so secretions flow and can be cleared. It is indicated as maintenance therapy for the viscous secretions of CF, and it improves FEV1 and reduces exacerbations. Giving it before airway clearance lets the thinned secretions be mobilized."},
@@ -732,7 +801,7 @@ const CASES = [
 const TERMS = [
  {u:"steroids",t:"IgE",d:"The antibody of allergic asthma and rhinitis. It coats mast cells, and an allergen cross-linking it triggers mediator release."},
  {u:"steroids",t:"Mast cell",d:"Tissue cell that degranulates on IgE cross-linking, releasing histamine, leukotrienes and prostaglandins. ↑ cAMP (β-agonists) inhibits release; ↑ cGMP and calcium influx promote it."},
- {u:"steroids",t:"Early vs late phase",d:"Early: minutes, mast-cell mediators → bronchospasm (SABA treats). Late: ~4–8 h, eosinophils and other cells → inflammation and BHR (corticosteroids treat; cromolyn beforehand blunts both)."},
+ {u:"steroids",t:"Early vs late phase",d:"Early: minutes, mast-cell mediators → bronchospasm (SABA treats). Late: 6–8 h, eosinophils and other cells → inflammation and BHR (corticosteroids treat; cromolyn beforehand blunts both)."},
  {u:"steroids",t:"Cromolyn sodium",d:"Mast cell stabilizer that blocks histamine RELEASE. Preventive only: take daily and before triggers (nebulized 20 mg QID). Few side effects."},
  {u:"steroids",t:"Zileuton",d:"Leukotriene modifier: 5-lipoxygenase inhibitor that blocks leukotriene production. Oral, chronic use; monitor liver enzymes."},
  {u:"steroids",t:"Montelukast / zafirlukast",d:"Leukotriene receptor antagonists for chronic control. Montelukast: once daily in the evening, watch mood/behavior. Zafirlukast: empty stomach."},
@@ -1196,7 +1265,7 @@ ${TRAP("“Best solution for sputum induction?” → <b>hypertonic</b> (pick th
 {o:"m4", h:"Standard doses and administration frequency", body:`
 ${T(["Drug","Standard dose","Frequency / how"],[
  ["Dornase alfa","2.5 mg = one 2.5 ml ampule","<b>Once daily</b> (some patients BID) by jet nebulizer. <b>Don’t dilute or mix</b>; refrigerate and protect from light"],
- ["Acetylcysteine aerosol","3–5 ml of <b>20%</b> or 6–10 ml of <b>10%</b>","3–4× daily by SVN, <b>with a bronchodilator</b>"],
+ ["Acetylcysteine aerosol","3–5 ml of <b>20%</b> or 6–10 ml of <b>10%</b>","3–4× daily by SVN; <b>pretreat with a bronchodilator</b> (albuterol needs ~15 min to start)"],
  ["Acetylcysteine instillation","1–2 ml of 10–20%","As needed (about every 1–4 h), then suction"],
  ["Hypertonic saline (CF)","4 ml of 7%","Twice daily, <b>after a bronchodilator</b>, before or with airway clearance"],
  ["Trikafta","See the table below","<b>Oral, with fat-containing food, twice daily ~12 h apart</b>"],
@@ -1328,7 +1397,7 @@ ${T(["Feature","Oral (OCS)","Parenteral (IV)","Inhaled (ICS)"],[
  ["Systemic side-effect risk","<b>High</b>","<b>High</b>","<b>Very low</b> at therapeutic doses"],
  ["Examples*","Prednisone","Methylprednisolone","Beclomethasone, budesonide, fluticasone"],
 ])}
-${NOTE("*Example drug names are general knowledge, not from the slides. A short (~5-day) burst doesn’t need a taper; prolonged therapy does.")}
+${NOTE("*Example drug names are general knowledge, not from the slides. Courses up to ~3 weeks can usually stop without a taper (textbook); longer or higher-dose courses taper ~10–20% every 1–2 weeks.")}
 ${HOOK("<b>O</b>ral = <b>O</b>nset in hours. <b>I</b>nhaled = <b>I</b>nvestment over weeks. <b>IV</b> = fastest route back to β-agonist responsiveness.")}
 `},
 {o:"s5", h:"Leukotriene modifiers in asthma", body:`
@@ -1349,7 +1418,7 @@ ${TRAP("“Take your montelukast during the attack” = wrong; use the rescue SA
 </ul>
 <h4>Early vs late phase</h4>
 ${T(["","Early (immediate) phase","Late phase"],[
- ["Timing","Within minutes (peaks ~15–30 min); resolves in about 1–2 h","Develops ~4–8 h later; can last 24 h or more"],
+ ["Timing","Within minutes; bronchodilators almost always reverse it","Develops <b>6–8 h</b> later (textbook); very hard to resolve"],
  ["What drives it","Mast-cell mediators: histamine, leukotrienes, prostaglandins","Recruited inflammatory cells: <b>eosinophils</b>, neutrophils, lymphocytes"],
  ["Result","Bronchospasm, edema, mucus","Ongoing airway inflammation, ↑ bronchial hyperresponsiveness, prolonged obstruction"],
  ["Drugs that help","<b>SABA</b> reverses the bronchospasm; <b>cromolyn</b> taken beforehand prevents it","<b>Corticosteroids</b> block it; <b>cromolyn</b> taken beforehand blunts it"],
@@ -1367,7 +1436,7 @@ ${T(["Drug","Class / action","Acute or chronic?","Key points"],[
  ["Albuterol (SABA)","β₂-agonist bronchodilator; also ↑ cAMP → <b>blocks histamine RELEASE</b>","<b>Acute</b> rescue","Treats early-phase bronchospasm; no effect on late-phase inflammation"],
  ["Prednisone (OCS)","Corticosteroid; <b>blocks mediator/histamine PRODUCTION</b> and inflammatory cells","<b>Both</b>: short burst for acute exacerbations; long-term only for severe persistent asthma","Onset 4–6 h. Taper after prolonged use"],
  ["Inhaled corticosteroid","Corticosteroid, localized","<b>Chronic</b> control","1–2 wk onset; spacer + rinse"],
- ["Cromolyn sodium","<b>Mast cell stabilizer</b>: <b>blocks histamine RELEASE</b> (degranulation)","<b>Chronic</b> / prophylactic only","Must be taken <b>before</b> exposure (e.g., 10–60 min before exercise or allergen) and regularly (nebulized 20 mg QID). Full benefit takes 2–4 weeks. Very few side effects (cough, throat irritation)"],
+ ["Cromolyn sodium","<b>Mast cell stabilizer</b>: <b>blocks histamine RELEASE</b> (degranulation)","<b>Chronic</b> / prophylactic only","Must be taken <b>before</b> exposure (e.g., 10–60 min before exercise or allergen) and regularly (nebulized 20 mg QID). Can be mixed with β-agonist solution. Give a 4–6 week trial. Very few side effects (cough, wheeze, bad taste, headache)"],
  ["Zileuton","Leukotriene modifier: <b>5-lipoxygenase inhibitor</b> (blocks leukotriene <i>production</i>)","<b>Chronic</b>","Oral; <b>monitor liver enzymes</b>"],
  ["Montelukast / zafirlukast","Leukotriene <b>receptor antagonists</b>","<b>Chronic</b>","Oral. Montelukast once daily in the evening (watch for mood/behavior changes); zafirlukast on an empty stomach"],
  ["Antihistamines","H₁-receptor blockers: block histamine’s <i>effects</i> after release","Allergic rhinitis / conjunctivitis","Not for acute asthma"],
@@ -1476,31 +1545,368 @@ ${HOOK("<b>“Have over one, want over x.”</b> Line up the units and the setup
 <p><b>Survanta 4 ml/kg · Infasurf 3 ml/kg · Curosurf 2.5 ml/kg</b> (1.25 ml/kg repeat). Convert g → kg first.</p>
 ${TRAP("The commonest error is using the % as if it were mg/ml (e.g., drawing up 5 ml of 0.5% albuterol = 25 mg, 10× the 2.5 mg dose). Always convert first, and sanity-check that nebulizer drug volumes are usually 0.5–5 ml.")}
 `},
-]}
+]},
+{u:"mucus", title:"Textbook notes: Ch. 6 (cleaned up)", objs:[
+{id:"tb61", p:"m6", h:"6.1 The mucociliary system", body:`
+<ul>
+ <li><b>Three airway layers:</b> mucosa (inner), submucosa, adventitia. <b>Bronchial smooth muscle is in the submucosa</b>, not the mucosa.</li>
+ <li><b>Mucosa:</b> mostly pseudostratified ciliated columnar epithelium, plus secretory cells: <b>goblet cells</b> (small amount of gelatinous mucus; increase in size and number with irritants), <b>serous cells</b> (thinner mucus that forms the sol layer) and club cells (highly metabolic; role unclear).</li>
+ <li><b>Bronchial glands</b> sit in the submucosa and make <b>most</b> airway mucus. They are stimulated by parasympathetic nerves. Smoking increases their size and number, which explains a smoker’s excess mucus and cough.</li>
+ <li>Goblet cells + bronchial glands make <b>~100 ml/day</b>; most is reabsorbed and ~10 ml reaches the pharynx and is swallowed.</li>
+ <li><b>Mucociliary escalator:</b> mucus blanket plus cilia from the naso/oropharynx to the terminal bronchi. ~200 cilia per cell, ~6 µm long, beating ~1,000×/min; mucus moves ~2 cm/min.</li>
+ <li><b>No cilia or mucus</b> from the respiratory bronchioles to the alveoli.</li>
+ <li><b>Blanket:</b> 5–10 µm thick. Gel layer 1–2 µm on top (sticky, traps particles and bacteria). Sol layer 4–8 µm (watery, lets cilia beat freely).</li>
+ <li>Mucus that is too thick (“rowing through pudding”) or too thin (“raking water”) is cleared poorly.</li>
+ <li><b>Mucus molecule:</b> ~95% water. The other 5% is long protein/lipid strands with carbohydrate side chains, cross-linked by <b>disulfide</b>, physical, ionic and hydrogen bonds. It is hydrophilic (“bottle brush”). Once formed, it doesn’t absorb water readily, so systemic hydration matters.</li>
+ <li><b>Functions of mucus:</b> prevents water moving into and out of the epithelium, shields the epithelium from toxins, irritants and microbes, prevents infection (antimicrobial enzymes), lubricates, and warms/humidifies inspired gas.</li>
+ <li><b>Mucus increases</b> with airway irritation and parasympathetic stimulation. CF, pneumonia and chronic bronchitis can more than double production while clearance also drops.</li>
+ <li><b>Slow or stop cilia:</b> thick mucus, dry gas, smoke, noxious gases, infection, positive-pressure ventilation, foreign bodies (ETTs), high O₂, and drugs such as atropine.</li>
+ <li><b>Dehydrating factors that thicken mucus:</b> ↑ respiratory rate, ↑ depth of breathing, systemic fluid loss, infection.</li>
+ <li><b>Three drug approaches:</b> ↑ sol depth (water, saline, expectorants) · alter gel consistency (mucolytics) · improve cilia (sympathomimetic bronchodilators, corticosteroids). Mechanical help: deep breathing, assisted cough, suctioning.</li>
+ <li><b>COPD teaching:</b> COPD is irreversible and progressive. <b>Stopping smoking</b> is the most important way to reduce mucus; no drug reverses the damage.</li>
+</ul>`},
+{id:"tb62", p:"m3", h:"6.2 Bland aerosols", body:`
+<ul>
+ <li>Bland aerosols (“<b>wetting agents</b>”): water, normal saline, hypotonic saline, hypertonic saline. They don’t act on the mucus molecule; they dilute it by changing water content.</li>
+ <li>They may not thin mucus much. Their benefit is probably <b>irritation</b> → more thin mucus from glands, a restored sol layer and a stimulated cough. Depending on the disease, they can also cause harm.</li>
+ <li><b>Humidifiers:</b> add water vapor by contact with water. Output is highly variable (contact time, surface area, temperature). Simple humidifiers are for O₂ delivery, not secretion therapy; heated humidity is mostly used with ventilators.</li>
+ <li><b>Nebulizers (aerosols):</b> the most common method. SVN holds 3–5 ml, only ~1 ml deposits, so it’s used for drugs and sputum induction. LVN and ultrasonic nebulizers deliver large volumes; ultrasonics can cause runny, watery secretions in infants, which impair clearance.</li>
+ <li><b>Direct instillation</b> (usually normal saline): artificial airways, bronchoscopy, rarely a transtracheal catheter. It is very irritating → strong cough.</li>
+ <li><b>Routine saline instillation during suctioning is discouraged:</b> it barely thins secretions, only ~20% is recovered, and it pushes bacteria from the ETT into the lungs (pneumonia risk). Reserve it for patients who don’t cough adequately during suctioning. It’s routine during bronchoscopy.</li>
+ <li><b>Sterile water</b> is free of microbes and may have bacteriostatic additives. <b>Distilled</b> is sterile and pure, and slightly more irritating. Inhaled solutions must be sterile, not necessarily distilled. Uses: diluent, humidifiers, LVNs, croup tents (soothing cool mist).</li>
+ <li><b>Dense aerosols</b> are more irritating → cough or bronchospasm (asthmatics), which makes them useful for sputum induction. Monitor breath sounds for wheezing.</li>
+ <li><b>Normal saline (0.9%):</b> isotonic, less irritating, less bronchospasm than water; common diluent. Normal or hypertonic saline can significantly ↓ lung function in COPD, so don’t give it routinely there.</li>
+ <li><b>Hypertonic saline (&gt;0.9%; usually 5% or 10%):</b> very irritating; used for sputum induction in a dry, nonproductive cough. Most likely to cause bronchospasm, so pretreat with a bronchodilator if needed, monitor, and be ready to stop. Beneficial in CF.</li>
+ <li><b>Hypotonic (0.45%, half-normal):</b> usual ultrasonic solution; less irritating than water or hypertonic; LVN or diluent.</li>
+</ul>`},
+{id:"tb63", p:"m3", h:"6.3 Mucolytics, expectorants & antitussives", body:`
+<ul>
+ <li><b>Why mucus thickens:</b> infection or dehydration plus inflammatory debris (WBCs, DNA). When the cilia can’t move it, the gel and sol layers merge into a vicious cycle.</li>
+ <li><b>Mucolytics</b> directly alter the mucus molecule, liquefying it. Two are FDA-approved for aerosol use: <b>acetylcysteine</b> and <b>dornase alfa</b>.</li>
+ <li><b>Sodium bicarbonate</b> (alkaline) makes mucus less adhesive and may potentiate acetylcysteine, but it isn’t proven, so it’s not recommended.</li>
+</ul>
+<h4>Acetylcysteine</h4>
+<ul>
+ <li><b>Uses:</b> thick secretions in CF, chronic bronchitis, TB, acute tracheobronchitis.</li>
+ <li><b>Mechanism:</b> breaks <b>disulfide bonds</b> → frees the mucopolysaccharide strands → ↓ viscosity and elasticity.</li>
+ <li><b>Dose:</b> 20%: 3–5 ml TID/QID · 10%: 6–10 ml TID/QID (too much for most SVNs, so the dose must be divided) · instillation: 1–2 ml of either.</li>
+ <li><b>Bronchospasm:</b> from the low pH (2.2), most often in reactive airways but possible in anyone. The 10% causes less than the 20%. Most clinicians use 20% with a bronchodilator given <b>beforehand</b>, because even albuterol takes ~15 min to start and 30–60 min to peak.</li>
+ <li><b>Other effects:</b> nausea, rhinorrhea (runny nose), bronchorrhea (excess thin airway secretions), stomatitis (mouth inflammation); sulfur/rotten-egg odor (it’s actually flavorless).</li>
+ <li><b>After treatment:</b> secretions must be cleared or they plug the airways. Deep breathing and coughing, watch breath sounds, keep suction ready. It’s corrosive to metal, so rinse the mouth and the nebulizer.</li>
+ <li><b>Good bronchial hygiene first:</b> percussion, postural drainage, cough training, PEP/oscillation.</li>
+ <li><b>Acetaminophen overdose:</b> potent antioxidant antidote, oral (mixed in cola or juice) or IV (Acetadote). Call poison control.</li>
+</ul>
+<h4>Dornase alfa (Pulmozyme)</h4>
+<ul>
+ <li>Recombinant human DNase (FDA 1994). In CF, abnormal chloride exchange ↑ Na⁺/water absorption → thick mucus → infection → neutrophil DNA thickens it further. Dornase breaks down that DNA; the higher the dose, the thinner the mucus.</li>
+ <li><b>Maintenance therapy</b> for CF secretions. <b>2.5 mg/2.5 ml once daily</b>; BID may help patients &gt;21 years with FVC &gt;85% predicted.</li>
+ <li>Don’t dilute or mix; refrigerate and protect from light; <b>discard if &gt;24 h at room temperature or discolored</b>; use only manufacturer-tested jet nebulizer/compressor combinations.</li>
+ <li><b>Side effects</b> (minimal): voice alteration, pharyngitis, laryngitis, rash, chest pain, conjunctivitis. <b>Contraindicated:</b> hypersensitivity to dornase or Chinese hamster ovary cell products.</li>
+</ul>
+<h4>Expectorants &amp; antitussives</h4>
+<ul>
+ <li><b>Expectorants</b> ↑ respiratory-tract fluid and stimulate cough, via the vagal-gastric reflex or direct gland stimulation. Guaifenesin (Robitussin, Mucinex) 200–400 mg PO q4h; potassium iodide (SSKI) 300–600 mg in 240 ml fluid PO 3–4×/day; hypertonic saline also counts. Evidence is controversial; drinking plenty of non-diuretic fluids is the simplest advice (avoid tea and alcohol).</li>
+ <li><b>Antitussives</b> depress the cough center in the medulla, for a dry, hacking, nonproductive cough. Codeine (opioid), dextromethorphan (non-opioid). <b>Never</b> for thick, retained secretions. Most useful short-term and in chronic bronchitis; little help for upper-respiratory-infection cough.</li>
+ <li>Combining an expectorant with a drying antihistamine (common in OTC products) is questionable.</li>
+</ul>
+<h4>Wrap-up</h4>
+<p>Keep the mucociliary system healthy (avoid smoke, pollution, allergens). When it fails: bronchodilators, systemic hydration, deep breathing and coughing, postural drainage, mucolytics, expectorants. Chest physiotherapy and intrapulmonary percussive ventilation (e.g., MetaNeb, for COPD, asthma, CF, bronchiectasis) help move secretions centrally.</p>`},
+{id:"tb64", p:"m8", h:"6.4 Surface-active agents (surfactant)", body:`
+<ul>
+ <li><b>Respiratory zone:</b> respiratory bronchioles, alveolar ducts, alveoli. There is no smooth muscle or mucus there.</li>
+ <li><b>Type I pneumocytes:</b> thin and flat, ~93% of alveolar surface, gas exchange. <b>Type II:</b> small, cuboidal, <b>make surfactant</b> (stored in lamellar bodies).</li>
+ <li><b>Composition:</b> 80% phospholipids, 10% neutral lipids (cholesterol), 10% surfactant proteins. <b>SP-B</b> is critical for lowering surface tension; SP-C helps it spread; SP-A and SP-D are host defense.</li>
+ <li><b>Functions:</b> prevents alveolar collapse, lets the lung expand easily, prevents fluid leakage across the alveolar-capillary membrane.</li>
+ <li><b>Surface tension</b> pulls a liquid surface inward. Per the law of Laplace, smaller alveoli collapse below their critical volume, and reopening needs a much higher critical pressure. Surfactant forms a monolayer (gas–lipid interface) → lower surface tension, bigger and stable alveoli, less work of breathing.</li>
+ <li>It works dynamically: molecules spread apart on inspiration (prevents overdistension) and pack tightly on exhalation (prevents collapse). It’s continuously replaced, and 90–95% is recycled by type II cells. Atelectasis, hypoxia and repeated collapse/reopening disrupt it.</li>
+ <li><b>Indication:</b> prevent or treat <b>RDS</b> (prematurity &lt;34 weeks, low birth weight). Also used for meconium aspiration, full-term RDS and congenital diaphragmatic hernia.</li>
+ <li><b>Endogenous</b> = made by the body; <b>exogenous</b> = given as a drug. Natural (animal lung wash; contains SP-B and SP-C) acts faster with lower mortality, less barotrauma and lower O₂ needs. Synthetic is free of infection and foreign protein but works less well.</li>
+ <li><b>Prophylactic</b> (&lt;26–27 weeks, given within minutes of birth; ↓ death if &lt;30 weeks) vs <b>rescue</b> (only babies with RDS signs; more time to confirm tube position, but injury may progress).</li>
+</ul>
+${T(["Drug","Type","Dose"],[
+ ["Calfactant (Infasurf)","Natural","3 ml/kg q12h, max 3 doses; no warming needed"],
+ ["Beractant (Survanta)","Natural/modified (bovine)","4 ml/kg birth weight q6h, up to 4 doses"],
+ ["Poractant alfa (Curosurf)","Natural (porcine)","2.5 ml/kg, then up to 2 doses of 1.25 ml/kg q12h"],
+ ["Lucinactant (Surfaxin)","Synthetic","5.8 ml/kg, up to 4 doses in the first 48 h"],
+])}
+<ul>
+ <li><b>Technique:</b> ETT positioned above the carina; suction first; warm to room temperature; divide into <b>4 aliquots</b>, 2 with the baby turned right and 2 turned left. Methods: sideport adapter (stays on vent, reflux possible), 5 Fr catheter (brief disconnect), double-lumen ETT.</li>
+ <li><b>Monitor</b> breath sounds, chest X-ray, chest rise/VT, ABGs, SpO₂. Compliance and VT rise fast, so <b>lower vent pressure and FiO₂</b>.</li>
+ <li><b>During administration:</b> reflux, transient ↓ oxygenation, bradycardia/hypotension. <b>After:</b> hyperoxygenation, hyperventilation (↓ PaCO₂), patent ductus arteriosus. <b>Uncommon:</b> apnea, pulmonary hemorrhage.</li>
+ <li><b>Adults/ARDS:</b> not proven. In RDS the problem is too little surfactant; in ARDS, injury stops surfactant from working, so adding more usually doesn’t help.</li>
+</ul>`},
+]},
+{u:"steroids", title:"Textbook notes: Ch. 7 (cleaned up)", objs:[
+{id:"tb71", p:"s6", h:"7.1 The inflammatory process", body:`
+<ul>
+ <li>The immune system neutralizes and removes <b>antigens</b> (dust mites, mold, smoke, viruses, dander, pollen, sulfites, bacteria).</li>
+ <li><b>Humoral</b> immunity = B lymphocytes making antibodies (immunoglobulins). <b>Cell-mediated</b> = T lymphocytes, acting directly or with macrophages and neutrophils.</li>
+</ul>
+${T(["Immunoglobulin","Key point"],[
+ ["IgG","<b>Most common</b>: 80% of plasma immunoglobulins; protects against childhood diseases"],
+ ["IgM","10%; increases in chronic infection"],
+ ["IgE","Hypersensitivity, allergic rhinitis, allergic asthma; <b>bound to mast cells</b>"],
+ ["IgA","Mucous membranes, saliva, bronchial secretions; passes immunity to the child"],
+ ["IgD","Role unknown (possibly B-cell maturation)"],
+])}
+<ul>
+ <li><b>Mast cells:</b> IgE attaches after the first exposure (“sensitized”). On re-exposure, an antigen–antibody reaction → <b>degranulation</b> → histamine, heparin and other mediators. Airway: bronchospasm. Eyes: watery, red, swollen. Nose: rhinitis, congestion.</li>
+ <li>Cleanup of the ruptured mast cell → arachidonic acid → <b>leukotrienes and prostaglandins</b> → more smooth-muscle contraction, mucosal edema, cell infiltration, mucus plugging.</li>
+ <li><b>Allergic asthma</b> (most common) has a specific external antigen; allergy shots are possible but take ≥6 months and risk anaphylaxis. <b>Nonallergic asthma</b> is triggered by infection, cold air, exercise or stress; there is no immune response, but mast cells still degranulate.</li>
+ <li>Mast cell stabilizers prevent rupture in both types. Goal of anti-inflammatory therapy: calm the overactive response without wiping out normal immunity.</li>
+ <li><b>Early phase:</b> vasodilation, ↑ permeability, redness, wheal; in asthma, bronchoconstriction, wheeze, cough, dyspnea, hypoxemia. <b>Bronchodilators almost always reverse it.</b></li>
+ <li><b>Late phase:</b> develops <b>6–8 h later</b> and is very hard to resolve. WBCs (↑ eosinophils, neutrophils, lymphocytes) infiltrate; goblet cells grow → hypersecretion and swelling → mucus plugging. Arachidonic acid feeds the lipoxygenase (leukotriene) and cyclooxygenase (prostaglandin) pathways.</li>
+ <li>↑ eosinophils on a CBC suggests an active allergic response.</li>
+ <li>Best block: stabilize the mast cell before the cascade starts. Corticosteroids act broadly on both phases.</li>
+</ul>`},
+{id:"tb72", p:"s1", h:"7.2 Corticosteroids", body:`
+<ul>
+ <li>Adrenal <b>medulla</b> → catecholamines (fight-or-flight). Adrenal <b>cortex</b> → corticosteroids.</li>
+ <li><b>Mineralocorticoids</b> (aldosterone; synthetic fludrocortisone): ↑ Na⁺ and water reabsorption → ↓ urine, ↑ blood volume. <b>Glucocorticoids:</b> carbohydrate, protein and fat metabolism; anti-inflammatory and immunosuppressive. Synthetics are made more glucocorticoid-like with less water retention, though most keep some mineralocorticoid effect.</li>
+ <li>Glucocorticoids raise blood sugar; diabetics on longer courses may need treatment adjustments.</li>
+</ul>
+${T(["Oral steroid","Glucocorticoid","Mineralocorticoid"],[
+ ["Hydrocortisone","1","1"],["Cortisone","0.8","0.8"],["Prednisone","2.5–3.5","0.8"],["Prednisolone","3–4","0.8"],["Methylprednisolone","4–5","0–0.8"],["Dexamethasone","20–40","0"],
+])}
+<ul>
+ <li>Endogenous glucocorticoid = <b>hydrocortisone</b>, ~10–30 mg/day, released with stress, surgery, infection and emotion on a diurnal rhythm; peaks ~8 a.m. (reverse dosing time for night-shift workers).</li>
+ <li>Used for asthma (acute and chronic); use in COPD is controversial. Routes: inhaled, oral, parenteral. Patients may feel euphoric and want to stay on them.</li>
+ <li><b>HPA axis:</b> hypothalamus → CRF → anterior pituitary → ACTH → adrenal cortex → corticosteroids (raise glucose for the brain and heart under stress). High levels shut off CRF and ACTH (negative feedback).</li>
+ <li><b>Exogenous steroids</b> → HPA suppression, adrenal atrophy, dependence; the body can’t tell drug from its own hormone. <b>Up to 3 weeks:</b> can stop without a taper. <b>Longer or higher doses:</b> taper ~10–20% every 1–2 weeks (dose packs make this easy).</li>
+ <li><b>Mechanism:</b> block the arachidonic-acid cascade (leukotrienes, prostaglandins); move lymphocytes, monocytes, eosinophils and basophils out of circulation and ↓ their production; ↓ antigen processing by macrophages; ↑ β₂ responsiveness via adenylyl cyclase. No direct bronchodilation, but they enhance β-agonists and improve FVC, FEV₁ and PEF with them.</li>
+ <li><b>Timing:</b> ↑ β-agonist responsiveness within <b>2 h</b>; ↑ β-receptor density within <b>4 h</b>; seasonal BHR ≥1 week; EIB ↓ after 4 weeks.</li>
+ <li><b>Remodeling:</b> long-standing inflammation changes the airway wall → persistent obstruction. Starting steroids early makes sense.</li>
+ <li><b>Short-term side effects:</b> ↑ appetite, stomach irritation, headache, mood changes (well-being → steroid psychosis), acne, hypokalemia, hyperglycemia (“steroid diabetes”), leukocytosis. Usually resolve after stopping.</li>
+ <li><b>Long-term:</b> osteoporosis/fractures, immunosuppression/infection, myopathy, plus everything in Table 7–3. ICS in children: no apparent effect on final adult height.</li>
+ <li><b>Oral/parenteral:</b> pulse or burst (e.g., prednisone 40 mg/day × 3 days) or alternate-day at 2–3× the daily dose; lowest effective dose. Healing takes days. Objective improvement ≥6–12 h (PFTs may improve by 12 h), max >1 week. IV isn’t clearly faster than oral. In the ED, give steroids if the β-agonist response is poor after 1–2 h; start early to blunt the late phase.</li>
+ <li><b>IV drugs:</b> hydrocortisone (Cortef), methylprednisolone (Solu-Medrol; less fluid retention, better in heart disease). After 48–72 h of improvement → taper to oral.</li>
+ <li><b>Inhaled:</b> MDI, DPI, nebulizer. The swallowed portion is absorbed and metabolized by the liver. Main local effects: <b>thrush</b> (treat with antifungal swish-and-swallow; prevent with spacer + rinse) and <b>dysphonia</b> (<b>not</b> helped by a spacer; may improve with a DPI).</li>
+</ul>
+${T(["Oral vs aerosol (Table 7–4)","Oral","Aerosol"],[
+ ["HPA suppression","Yes","No (small risk at recommended doses)"],["Cushing’s syndrome","Yes","No (rare reports at high doses)"],["Steroid dependence","High risk","Low risk"],["Local effects","No","Yes"],["Growth risk in children","Yes","No"],["Easy to use","Yes","No"],["Cost","Inexpensive","Expensive"],["Local airway reaction","No","Yes"],
+])}
+<ul>
+ <li>Inhaled steroids are roughly equivalent at similar doses; most are given twice daily; doses are classed low, medium or high. Time course: symptoms 1–2 weeks, max 4–8 weeks; FEV₁/PEF 3–6 weeks; BHR 1–3 months and beyond.</li>
+ <li><b>High-dose ICS:</b> regular eye exams, bone-density testing, exercise, calcium and vitamin D.</li>
+ <li><b>Benefits of daily ICS:</b> fewer symptoms and severe exacerbations, less SABA use, ↓ remodeling, better lung function, ↓ inflammation. Stop them and lung function returns to baseline in 1–2 months. ICS alone beats LABA alone.</li>
+ <li><b>ICS/LABA combos:</b> Symbicort (budesonide/formoterol) 2 puffs BID · Advair Diskus (fluticasone/salmeterol) 1 BID · Breo Ellipta 1 daily · Wixela 1 BID · Airduo 1 BID · Dulera 2 BID · Breztri (+glycopyrrolate) 2 BID · Trelegy (+umeclidinium) 1 daily.</li>
+ <li><b>Steroid dependency:</b> psychological (feels good) or physiological (HPA suppression). <b>Withdrawal syndrome:</b> anorexia, nausea, vomiting, lethargy, headache, hypotension. Avoid it with alternate-day dosing and aerosols.</li>
+</ul>`},
+{id:"tb73", p:"s6", h:"7.3 Cromolyn sodium & nedocromil", body:`
+<ul>
+ <li><b>Mast cell stabilizers</b> (“mediator release inhibitors”): prevent inflammation from starting, whereas steroids treat inflammation that’s already established. Nedocromil works the same way and differs mainly in potency.</li>
+ <li><b>Uses:</b> allergic and nonallergic intermittent asthma, prevention of allergic rhinitis, and exercise-induced bronchospasm.</li>
+ <li><b>Not bronchodilators</b> and don’t block mediators already released, so they’re never for acute bronchospasm. They’re <b>prophylactic</b>: use them regularly, even when symptom-free.</li>
+ <li><b>Mechanism:</b> block <b>calcium influx</b> into the mast cell, which is needed for degranulation. They blunt <b>early and late</b> reactions from immunologic and nonimmunologic triggers, including cold air and ultrasonic water mist, and prevent the pollen-season rise in BHR. They’re believed to be less effective than ICS.</li>
+ <li><b>Dosage form:</b> nebulizer solution only (poorly absorbed orally). Response and duration are dose-related. <b>Compatible with β-agonist solutions</b> (can be mixed). Give a <b>4–6 week trial</b>; success = fewer or milder episodes. An alternative for children with theophylline side effects.</li>
+ <li><b>Side effects:</b> nontoxic, no tolerance; cough, wheeze, bad taste, headache. Serious effects occur in &lt;1 in 10,000.</li>
+</ul>`},
+{id:"tb74", p:"s6", h:"7.4 Prostaglandins", body:`
+<ul>
+ <li><b>NSAIDs</b> (ibuprofen, aspirin, naproxen) inhibit prostaglandin synthesis and can trigger bronchospasm in <b>aspirin-sensitive asthmatics</b>, who may rely on prostaglandins rather than the β system for airway tone.</li>
+ <li>Prostaglandins are not currently used to treat airway disease. They are made on demand (not stored), have half-lives of minutes, and affect airway tone and pulmonary blood flow (V/Q).</li>
+ <li><b>Release triggers:</b> pulmonary embolism, lung edema, hypoxia, bradykinin, histamine, antigen–antibody reaction.</li>
+</ul>
+${T(["Prostaglandin","Airway","Blood vessels"],[
+ ["PGF2α (most common in lung)","Bronchoconstriction, ↑ mucus","Constriction, ↑ resistance"],
+ ["PGE1","Bronchodilation","Relaxation, ↓ resistance"],
+ ["PGE2","Bronchodilation","Constriction, ↑ resistance"],
+])}`},
+{id:"tb75", p:"s5", h:"7.5 Leukotriene modifiers", body:`
+<ul>
+ <li><b>Oral</b> drugs that block the leukotriene cascade (5-lipoxygenase pathway from arachidonic acid). Leukotrienes contract smooth muscle, vasodilate, ↑ permeability, ↑ mucus and ↓ mucociliary clearance.</li>
+ <li><b>Zafirlukast</b> (Accolate) and <b>montelukast</b> (Singulair) are leukotriene <b>antagonists</b>. <b>Zileuton</b> (Zyflo) is rarely used because it can injure the liver.</li>
+ <li><b>Role:</b> alternatives to low-dose ICS, cromolyn or nedocromil in mild persistent asthma; <b>long-term control, not acute treatment</b>; mainly mild to moderate asthma.</li>
+ <li><b>Zafirlukast:</b> allergen-induced asthma, early and late responses. Take on an <b>empty stomach</b>. It ↑ warfarin effect (↑ prothrombin time). Side effects: pharyngitis, headache, rhinitis, gastritis, ↓ liver function.</li>
+ <li><b>Montelukast:</b> ↓ β-agonist puffs and ↑ FEV₁ (children and adults); with ICS, the steroid dose can be lowered. Side effects: fatigue, fever, nasal congestion, cough, dizziness, rash.</li>
+ <li>Response varies by patient. Give a <b>1-month trial</b>; no improvement = “leukotriene nonresponder” → switch controllers.</li>
+</ul>`},
+{id:"tb76", p:"s6", h:"7.6 Monoclonal antibodies (biologics)", body:`
+<ul>
+ <li><b>Omalizumab (Xolair):</b> an IgG monoclonal antibody that stops IgE binding to mast cells and basophils → less mediator release. It ↓ exacerbations and steroid use.</li>
+ <li>Given <b>subcutaneously</b>; dose and frequency are based on body weight and pretreatment total IgE. For <b>moderate–severe allergic asthma</b> not controlled on medium- to high-dose ICS + LABA. Most common adverse effect: injection-site reactions. Monitor baseline IgE, weight, PFTs.</li>
+ <li><b>Mepolizumab (Nucala)</b> SC every 4 weeks and <b>benralizumab (Fasenra)</b> SC every 4–8 weeks act on the <b>IL-5</b> pathway (IL-5 drives eosinophil growth, recruitment and survival) → fewer eosinophils.</li>
+ <li>Biologics are expensive and reserved for patients who fail traditional therapy. They only work if that specific pathway drives the patient’s disease.</li>
+</ul>`},
+{id:"tb77", p:"s6", h:"7.7 Upper airway congestion", body:`
+<ul>
+ <li>Upper airway congestion ↑ work of breathing and airway resistance and can spread infection, which matters a lot in patients with lung disease.</li>
+ <li><b>Allergic rhinitis</b> (seasonal or perennial): sneezing, rhinorrhea, congestion, itching from nasal mast-cell degranulation.</li>
+ <li><b>Intranasal cromolyn</b> (Nasalcrom, OTC): start before pollen season, 3–4×/day, full effect in 2–4 weeks; helps sneezing, rhinorrhea and itching, but not existing congestion. Common for children with mild symptoms.</li>
+ <li><b>Intranasal corticosteroids</b> (Beconase, Rhinocort, Omnaris, Flonase, Veramyst, Nasacort, Nasonex): inhibit cytokines and leukotrienes and ↓ congestion. Full effect in 2–4 weeks (newer ones start in 3–12 h); an 8-week trial is adequate; max effect up to 6 months. Side effects: burning, stinging, irritation, dry nose. Start at the max dose for age, then lower; clear crusting first; head tilted downward.</li>
+ <li><b>Histamine</b> is stored in mast cells. Release triggers: IgE antigen–antibody reactions, mechanical trauma, tissue hypoxia, drugs (e.g., morphine itching), dust, cigarette smoke.</li>
+ <li><b>H1 receptors</b> mediate smooth-muscle contraction, so antihistamines target H1. H2 blockers (e.g., cimetidine) act on the stomach and are not called antihistamines.</li>
+ <li><b>Histamine effects.</b> Lung: ↑ airway resistance, ↓ max expiratory flow, ↓ diffusion capacity, ↑ TLC, ↑ mucus, mucosal edema. Systemic: vasodilation, ↑ permeability, catecholamine release.</li>
+ <li>Histamine <b>release</b> is prevented by β-agonists, methylxanthines and cholinergic blockers; cromolyn and corticosteroids play a role in blocking histamine <b>production</b> (see the conflicts note below).</li>
+ <li><b>Antihistamines</b> inactivate H1 receptors; they don’t stop release. They’re not useful in acute asthma (too many other mediators) and are used for allergic rhinitis. They <b>prevent symptoms better than they reverse them</b>, so start before a predictable season.</li>
+ <li><b>Side effects:</b> dry mouth and throat, altered coordination, sedation (no driving or machinery), paradoxical excitation, tolerance (they induce their own metabolism). Tolerance to sedation develops in 2–3 weeks.</li>
+ <li><b>1st generation</b> (chlorpheniramine, diphenhydramine/Benadryl, brompheniramine): sedating, impair CNS; avoid in children (school performance) and the elderly (blurred vision, confusion, urinary hesitancy). Relief in 1–2 h, max effect takes weeks. <b>2nd generation</b> (loratadine/Claritin, cetirizine/Zyrtec, fexofenadine/Allegra, desloratadine, levocetirizine): less sedating, anti-inflammatory, <b>preferred</b>.</li>
+ <li>Nasal antihistamine sprays: olopatadine and azelastine (Rx). Azelastine starts in ~15 min, so it can be used as needed; it’s sedating if swallowed.</li>
+ <li><b>Decongestants:</b> α-adrenergic vasoconstrictors. Phenylephrine replaced pseudoephedrine (abuse) in most OTC products but is less effective; use caution in diabetes, heart disease, hyperthyroidism and glaucoma, and monitor BP. Topical sprays ≤3 days (rebound congestion); a topical decongestant first can help an intranasal steroid absorb.</li>
+</ul>`},
+{id:"tbx", h:"What I removed & what doesn’t add up", body:`
+<h4>Removed while cleaning</h4>
+<ul>
+ <li>Page numbers, “Decorative” labels, video links, image and figure descriptions, “Report a problem” and “View full assignment” text.</li>
+ <li>Homework questions: moved into the <b>Quiz</b> (Question set → Review quizzes), with the textbook’s rationales.</li>
+ <li><b>Clinical pearls</b> (left out as requested): Mucomyst brand name, why O₂ dips during surfactant, atopic/extrinsic naming, how to pick an ICS dose, intranasal cromolyn before a one-time exposure, eye-symptom drops, first-gen antihistamine satisfaction.</li>
+ <li>Side stories that are unlikely to be tested: club-cell naming history, spironolactone, folk-medicine and CF salty-skin stories, sex hormones, the list of approved dornase nebulizer brands.</li>
+ <li>“Time for Review” prompts. Their answers are already covered in the guide.</li>
+</ul>
+<h4>Places the textbook doesn’t line up (and what to go with)</h4>
+${T(["Topic","Textbook says","Go with"],[
+ ["Remodeling","7.2d: steroids “prevent and reduce” remodeling. 7.2h: “prevent and reverse”","<b>Slides:</b> can prevent/reduce, but <b>can’t completely reverse</b> established remodeling"],
+ ["Acetylcysteine dose","Text: 3–5 ml of 20% or 6–10 ml of 10%. Table 6–2: “1–10 ml of 10%, or 2–20 ml of 20%”","The <b>text</b> values (3–5 ml 20%, 6–10 ml 10%). The table looks garbled"],
+ ["Dornase “proteolytic enzyme”","Calls dornase a proteolytic (protein-breaking) enzyme","It breaks down <b>DNA</b> (a DNase). Answer “digests DNA”"],
+ ["Cromolyn: release or production?","7.3 calls it a mediator <b>release</b> inhibitor; 7.7c groups cromolyn with corticosteroids in “blocking histamine <b>production</b>”","Mechanism = blocks <b>release</b>. If a matching question pairs cromolyn with “production,” it’s pulling from 7.7c, so check your key"],
+ ["Homework: “IgE is the most common immunoglobulin”","Rationale just says IgE is linked to allergies","<b>False</b>: IgG is most common (80%, Table 7–1); IgE is the <i>allergy</i> antibody"],
+ ["Late-phase timing","6–8 h after exposure","<b>6–8 h</b> (the site now uses this)"],
+ ["Saline in COPD","Normal <i>or</i> hypertonic saline can ↓ lung function in COPD","Slides only mention hypertonic. Know both"],
+ ["Hypertonic saline use","“Used only for sputum induction” but later “beneficial in CF”","Both: sputum induction + CF"],
+ ["Cromolyn timeline","Inhaled: 4–6 week trial. Intranasal: 2–4 weeks for full effect","Inhaled <b>4–6 weeks</b>; intranasal 2–4 weeks"],
+ ["Taper rule","Courses up to 3 weeks can stop without a taper","Use this; the site said “~5-day burst” before"],
+ ["Leukotriene modifiers","“Mild to persistent asthma” (same wording as slides)","Read as <b>mild persistent</b>"],
+ ["Mepolizumab vs benralizumab","Says both block the IL-5 receptor","Mepolizumab binds IL-5 itself; benralizumab binds the receptor. Either way: ↓ eosinophils"],
+])}
+<h4>Quiz answers updated from the textbook</h4>
+<ul>
+ <li><b>“Volume or thickness of mucus can be increased by…”</b> → now <b>chronic bronchitis</b>. The text and Figure 6–3 name it as a disease that increases mucus volume/thickness.</li>
+ <li><b>“Best way to prevent bronchospasm with nebulized acetylcysteine”</b> → now <b>pretreat with albuterol by nebulizer before the acetylcysteine</b>. The textbook says the bronchodilator should be given beforehand because albuterol needs ~15 min to start working.</li>
+</ul>`},
+]},
 ];
 
-const HIGH_YIELD = [
- ["Mucus","~95% water, ~100 ml/day"],
- ["Hypertonic saline","1.8–10%: sputum induction, CF; most bronchospasm; ↓ COPD lung function"],
- ["Isotonic","0.9% NaCl"],
- ["NAC","Breaks disulfide bonds; 10% = 100 mg/ml, 20% = 200 mg/ml; give with bronchodilator; acetaminophen antidote"],
- ["Dornase alfa","Digests DNA; CF maintenance; 2.5 mg once daily; don’t mix"],
- ["Trikafta","≥2 yr + ≥1 F508del; oral with fatty food BID q12h; liver + cataracts"],
- ["Mucoactive timing","BEFORE airway clearance"],
- ["IV steroid","β receptors ↑ in 2–4 h"],
- ["OCS","Onset 4–6 h, peak 24–48 h"],
- ["ICS","1–2 wk initial, 4–8 wk max; FEV₁ 3–6 wk; BHR 1–3 mo"],
- ["Seasonal BHR / EIB","≥1 week / 4 weeks"],
- ["Stop long-term steroids","Taper (weeks–months), or adrenal crisis"],
- ["ICS thrush","Candida albicans / Aspergillus niger: spacer + gargle"],
- ["Systemic steroid SEs","Infection, edema/HTN, euphoria/insomnia, thin skin/bruising, diabetes, electrolyte imbalance, osteoporosis, growth suppression, glaucoma"],
- ["LTM","Alternative to low-dose ICS (mild persistent); not rescue"],
- ["Allergy","IgE on mast cells → histamine, leukotrienes. Early phase = minutes; late phase = 4–8 h (eosinophils)"],
- ["Cromolyn","Mast cell stabilizer; blocks release; preventive only; take before exposure"],
- ["Antihistamines","Sedation (1st gen), anticholinergic drying; no machinery"],
- ["% → mg/ml","Decimal 1 right (×10)"],
- ["Weight","lb ÷ 2.2 = kg; dose = mg/kg × kg"],
+const TB = "<span class=\"tb\">Textbook</span>";
+const HY = [
+{u:"mucus", groups:[
+ {o:"m1", items:[
+  ["Mucus","~95% water; ~100 ml/day from goblet cells + bronchial glands; only ~10 ml reaches the pharynx (swallowed)"],
+  ["Who makes most mucus","<b>Bronchial (submucosal) glands</b>, stimulated by parasympathetic nerves. Goblet cells make gelatinous mucus; serous cells make the thin sol-layer fluid "+TB],
+  ["Mucus blanket","5–10 µm total: <b>gel</b> 1–2 µm on top (sticky, traps particles “like flypaper”) + <b>sol</b> 4–8 µm underneath (watery, cilia beat in it) "+TB],
+  ["Viscoelastic","Able to change from thick to thin and back. Water must be available <i>as mucus forms</i>; once formed, mucus doesn’t absorb water readily "+TB],
+  ["Mucolytic / expectorant / antitussive","Breaks the mucus molecule / ↑ airway fluid and cough / suppresses cough"],
+  ["Sterile vs distilled","Sterile = no microbes, may contain bacteriostatic additives. Distilled = sterile + pure (and slightly <i>more</i> irritating "+TB+")"],
+  ["Tonicity (Table 6–1)","0.45% hypotonic (half-normal) · 0.9% isotonic (normal) · 5% and 10% hypertonic"],
+ ]},
+ {o:"m2", items:[
+  ["3 approaches","Gel consistency → <b>mucolytics</b> · sol depth → <b>water/saline/expectorants</b> · cilia → <b>sympathomimetics + corticosteroids</b>"],
+  ["Bland aerosols (“wetting agents”)","Don’t act on the mucus molecule; may dilute it. All are somewhat irritating → ↑ thinner mucus, restore sol layer, stimulate cough"],
+  ["Acetylcysteine","Breaks <b>disulfide bonds</b> → ↓ viscosity and elasticity of the gel layer"],
+  ["Dornase alfa","Recombinant human DNase: <b>digests extracellular DNA</b> left by dead neutrophils (CF)"],
+  ["Sodium bicarbonate","Alkaline pH makes mucus less adhesive, but it isn’t proven to help, so it’s <b>not recommended</b> "+TB],
+ ]},
+ {o:"m3", items:[
+  ["Hypertonic saline","Sputum induction (dry, nonproductive cough); beneficial in CF; <b>most bronchospasm</b> → may pretreat with bronchodilator and monitor"],
+  ["Normal saline","Isotonic, least likely to cause bronchospasm, common diluent. Textbook: normal OR hypertonic saline can significantly ↓ lung function in COPD "+TB],
+  ["0.45% saline","Usual ultrasonic-nebulizer solution; also LVNs and diluent; less irritating than water or hypertonic"],
+  ["Sterile water","Diluent, humidifiers, LVNs, croup tents (cool mist may soothe inflamed upper airway)"],
+  ["Acetylcysteine uses","Thick secretions in CF, chronic bronchitis, TB, acute tracheobronchitis; IV/oral <b>acetaminophen-overdose antidote</b>"],
+  ["Dornase alfa","CF maintenance only"],
+  ["Saline instillation with suctioning","<b>Discouraged</b>: only ~20% is recovered and it washes ETT bacteria into the lungs (pneumonia risk). Use only to provoke a cough "+TB],
+  ["Timing / who benefits","Give mucoactive drugs <b>before</b> airway clearance. A strong cough with normal airflow usually doesn’t need drugs"],
+  ["Devices","SVN: 3–5 ml, only ~1 ml reaches the lung → meds and sputum induction. LVN/ultrasonic: large volumes; can make secretions runny (infants) "+TB],
+ ]},
+ {o:"m4", items:[
+  ["Acetylcysteine","<b>20%: 3–5 ml</b> or <b>10%: 6–10 ml</b>, TID–QID; instill 1–2 ml. <b>Pretreat with a bronchodilator</b> (albuterol takes ~15 min to start). 10% causes less bronchospasm than 20%; pH 2.2; rotten-egg odor; corrosive to metal; rinse mouth; have suction ready (mucus plugging)"],
+  ["Dornase alfa","<b>2.5 mg/2.5 ml ampule once daily</b> (BID may help if >21 years and FVC >85%). Don’t dilute or mix; refrigerate, protect from light; discard if >24 h at room temp or discolored. Side effects: voice change, pharyngitis, laryngitis, rash, chest pain, conjunctivitis "+TB],
+  ["Guaifenesin","200–400 mg PO every 4 h "+TB],
+  ["Potassium iodide (SSKI)","300–600 mg diluted in 240 ml fluid, PO 3–4×/day "+TB],
+  ["Trikafta","≥12 y: 2 orange AM + ivacaftor 150 mg PM · 6–&lt;12 y: &lt;30 kg 2 light orange + 75 mg; ≥30 kg adult dose · 2–&lt;6 y: &lt;14 kg granules 80/40/60 + 59.5 mg; ≥14 kg 100/50/75 + 75 mg"],
+  ["Surfactant doses","Beractant (Survanta) <b>4 ml/kg</b> q6h, ≤4 doses · calfactant (Infasurf) <b>3 ml/kg</b> q12h, ≤3 · poractant (Curosurf) <b>2.5 ml/kg</b>, then ≤2 × 1.25 ml/kg q12h · lucinactant (Surfaxin, synthetic) 5.8 ml/kg, ≤4 in 48 h "+TB],
+ ]},
+ {o:"m5", items:[
+  ["Who qualifies","Age <b>≥2</b> + <b>≥1 F508del</b> (or other responsive) mutation"],
+  ["How it works","Correctors (elexacaftor, tezacaftor) fix folding and get CFTR to the surface; potentiator (ivacaftor) opens the gate"],
+  ["Watch / teach","Liver damage, cataracts in children, drug interactions; oral with fatty food ~12 h apart; keep all previous therapies"],
+ ]},
+ {o:"m6", items:[
+  ["Airway layers","<b>Mucosa</b> (ciliated epithelium, goblet cells) · <b>submucosa</b> (bronchial glands, smooth muscle, cartilage) · adventitia "+TB],
+  ["Cilia","~200 per cell, ~6 µm long, beat ~1,000×/min; mucus moves ~2 cm/min "+TB],
+  ["No cilia or mucus","From the respiratory bronchioles down to the alveoli "+TB],
+  ["Mucus functions","Prevents water moving in/out of epithelia · shields epithelium from toxins, irritants, microbes · antimicrobial enzymes prevent infection · lubricates · warms and humidifies "+TB],
+  ["Mucus ↑","Irritation and parasympathetic stimulation; CF, pneumonia, chronic bronchitis can more than double it "+TB],
+  ["Things that slow cilia","Thick mucus, dry gas, smoke, noxious gases, infection, positive-pressure ventilation, ETTs/foreign bodies, high FiO₂, atropine "+TB],
+  ["Dehydrating factors","↑ respiratory rate, ↑ depth of breathing, systemic fluid loss, infection "+TB],
+ ]},
+ {o:"m7", items:[
+  ["Expectorants","↑ airway fluid and cough via the vagal-gastric reflex or direct gland stimulation: guaifenesin, potassium iodide, hypertonic saline. Evidence is weak; best advice is to drink non-diuretic fluids (avoid tea and alcohol) "+TB],
+  ["Antitussives","Depress the medullary cough center: codeine (opioid), dextromethorphan (non-opioid). <b>Never</b> with thick retained secretions; short-term; useful in chronic bronchitis, little help for URI cough "+TB],
+ ]},
+ {o:"m8", items:[
+  ["Made by","Type II pneumocytes (type I = ~93% of alveolar surface, gas exchange) "+TB],
+  ["Composition","80% phospholipids, 10% neutral lipids, 10% proteins. <b>SP-B</b> critical for lowering surface tension, SP-C spreading, SP-A/SP-D host defense "+TB],
+  ["Functions","Prevents alveolar collapse, lets the lung expand easily, prevents fluid leakage "+TB],
+  ["Indication","RDS of prematurity (&lt;34 weeks). Prophylactic (&lt;26–27 weeks, within minutes of birth) vs rescue (signs of RDS) "+TB],
+  ["Natural vs synthetic","Natural (beractant, calfactant, poractant) act faster, lower mortality; lucinactant is synthetic "+TB],
+  ["Giving it","Intratracheal via ETT above the carina; suction first; room temperature; 4 aliquots, turning side to side; sideport adapter, 5 Fr catheter, or double-lumen ETT "+TB],
+  ["Hazards","<b>During:</b> reflux, transient ↓ O₂, bradycardia/hypotension · <b>After:</b> hyperoxygenation, hyperventilation (↓ PaCO₂ from ↑ VT as compliance improves), PDA · <b>Rare:</b> apnea, pulmonary hemorrhage "+TB],
+  ["Adults / ARDS","Not proven effective "+TB],
+ ]},
+]},
+{u:"steroids", groups:[
+ {o:"s1", items:[
+  ["Two classes","<b>Mineralocorticoids</b> (aldosterone, fludrocortisone: Na⁺/water retention) and <b>glucocorticoids</b> (metabolism, anti-inflammatory)"],
+  ["Adrenal gland","Medulla → catecholamines; <b>cortex</b> → corticosteroids. Main endogenous glucocorticoid: hydrocortisone, 10–30 mg/day, peaks ~8 a.m. "+TB],
+  ["HPA axis","Hypothalamus → <b>CRF</b> → anterior pituitary → <b>ACTH</b> → adrenal cortex → cortisol; negative feedback; diurnal rhythm"],
+  ["Exogenous steroids","HPA suppression, adrenal atrophy, dependence. They do <b>not</b> cause hypothalamic CRF release"],
+  ["Taper","Up to ~3 weeks: can stop without a taper. Longer or higher doses: ↓ 10–20% every 1–2 weeks "+TB],
+  ["Potency (Table 7–2)","Hydrocortisone 1 · prednisone 2.5–3.5 · methylprednisolone 4–5 · dexamethasone 20–40 (no mineralocorticoid effect) "+TB],
+  ["Mechanism","Block arachidonic acid (leukotrienes, prostaglandins); ↓ eosinophils, basophils, monocytes, lymphocytes; ↑ β-agonist responsiveness (2 h) and β-receptor density (4 h); no direct bronchodilation"],
+  ["Time course","Seasonal BHR ≥1 week · EIB ↓ after 4 weeks"],
+ ]},
+ {o:"s2", items:[
+  ["ICS teaching","Daily controller, spacer, rinse and spit; symptoms improve in 1–2 weeks, max at 4–8 weeks; FEV₁/PEF 3–6 weeks; BHR 1–3 months and beyond"],
+  ["Thrush","Treat with an antifungal swish-and-swallow; prevent with spacer + rinsing"],
+  ["Dysphonia","<b>Not</b> reduced by a spacer; may be lowered with a DPI "+TB],
+  ["High-dose ICS","Regular eye exams, bone-density testing, exercise, calcium and vitamin D "+TB],
+  ["Daily ICS benefits","Fewer symptoms and exacerbations, less SABA use, ↓ remodeling, better lung function, ↓ inflammation; ICS alone beats LABA alone "+TB],
+  ["With a bronchodilator","Bronchodilator first, then ICS"],
+ ]},
+ {o:"s3", items:[
+  ["Short-term","<b>↑ appetite</b>, stomach irritation, headache, mood changes (euphoria → steroid psychosis), acne, hypokalemia, hyperglycemia (steroid diabetes), leukocytosis "+TB],
+  ["Long-term","Osteoporosis, immunosuppression/infection, myopathy; Cushingoid features (moon face, buffalo hump, wasting, striae)"],
+  ["Table 7–3","Immunosuppression · edema/HTN · euphoria/insomnia · thin skin/bruising/poor healing · diabetes · electrolyte imbalance/negative N balance · weakness/osteoporosis/growth suppression · glaucoma"],
+  ["ICS (local)","Thrush (<i>Candida</i>), dysphonia"],
+  ["Withdrawal syndrome","Anorexia, nausea, vomiting, lethargy, headache, hypotension "+TB],
+  ["Children","Inhaled steroids: no apparent effect on final adult height "+TB],
+ ]},
+ {o:"s4", items:[
+  ["Oral","Burst (e.g., prednisone 40 mg/day × 3 days) or alternate-day dosing; lowest dose that works. Onset 4–6 h, peak 24–48 h"],
+  ["Objective improvement","At least 6–12 h; maximum may take >1 week "+TB],
+  ["ED","Give systemic steroids if the β-agonist response is poor over 1–2 h "+TB],
+  ["IV","Hydrocortisone (Cortef), <b>methylprednisolone (Solu-Medrol)</b>: less fluid retention, good in heart disease. Once improved (48–72 h), switch to oral "+TB],
+  ["Oral vs aerosol (Table 7–4)","Oral: HPA suppression, Cushing’s, high dependence risk, growth risk, cheap, easy. Aerosol: local effect, low risk, expensive, harder to use "+TB],
+  ["ICS/LABA combos","Symbicort 2 puffs BID · Advair Diskus 1 BID · Breo Ellipta 1 daily · Dulera 2 BID · Trelegy 1 daily (+LAMA) "+TB],
+  ["Avoid dependence","Alternate-day dosing and aerosol use "+TB],
+ ]},
+ {o:"s5", items:[
+  ["Leukotriene effects","Smooth-muscle contraction, vasodilation, ↑ permeability, ↑ mucus, ↓ mucociliary clearance"],
+  ["The drugs","<b>Montelukast</b> (Singulair) and <b>zafirlukast</b> (Accolate) = receptor antagonists; <b>zileuton</b> (Zyflo) = 5-lipoxygenase inhibitor, rarely used (liver injury)"],
+  ["Role","Oral, long-term control only; alternative to low-dose ICS or cromolyn in mild persistent asthma"],
+  ["Zafirlukast","Empty stomach; ↑ warfarin effect (↑ PT); side effects: pharyngitis, headache, rhinitis, gastritis, ↓ liver function "+TB],
+  ["Montelukast","↓ SABA puffs, ↑ FEV₁, lets ICS dose come down; side effects: fatigue, fever, congestion, cough, dizziness, rash "+TB],
+  ["Trial","1 month; no improvement = nonresponder → switch controller "+TB],
+ ]},
+ {o:"s6", items:[
+  ["Immunoglobulins (Table 7–1)","<b>IgG</b> most common (80%) · IgM chronic infection · <b>IgE</b> allergy, bound to mast cells · IgA mucous membranes · IgD unknown "+TB],
+  ["Mast cell","IgE sensitizes → re-exposure → <b>degranulation</b> (histamine, heparin…) → bronchospasm. Arachidonic acid → lipoxygenase (leukotrienes) + cyclooxygenase (prostaglandins)"],
+  ["Early vs late","Early: minutes, bronchodilators reverse it · Late: <b>6–8 h</b> later, eosinophils/neutrophils, hard to resolve "+TB],
+  ["Nonallergic asthma","Infection, cold air, exercise, stress; mast cells still degranulate "+TB],
+  ["Cromolyn / nedocromil","Mast cell stabilizer (“mediator release inhibitor”): blocks Ca²⁺ influx → no degranulation; blunts early + late; prophylactic only, use regularly even when well; aerosol only (poor GI absorption); can be mixed with β-agonist solution; <b>trial 4–6 weeks</b>; side effects: cough, wheeze, bad taste, headache "+TB],
+  ["Antihistamines","Inactivate H₁ receptors; for allergic rhinitis, not acute asthma; prevent better than reverse → start before the season. Side effects: dry mouth, altered coordination, sedation, excitation, tolerance. 1st gen: avoid in children/elderly; 2nd gen preferred "+TB],
+  ["Intranasal","Cromolyn: before pollen season, 3–4×/day, 2–4 weeks for full effect. Steroids (Flonase etc.): 2–4 weeks, 8-week trial; burning, stinging, dry nose "+TB],
+  ["Decongestants","α-agonist vasoconstrictors; phenylephrine caution in diabetes, heart disease, hyperthyroidism, glaucoma; watch BP; topical ≤3 days (rebound) "+TB],
+  ["Biologics","<b>Omalizumab</b> (Xolair): anti-IgE, SC, dose by weight + IgE level, for moderate–severe allergic asthma uncontrolled on ICS + LABA. Mepolizumab/benralizumab: IL-5 pathway → fewer eosinophils "+TB],
+  ["Prostaglandins","PGF2α (most common in lung): bronchoconstriction, ↑ mucus · PGE1/PGE2: bronchodilation. NSAIDs/aspirin can trigger bronchospasm in aspirin-sensitive asthmatics "+TB],
+ ]},
+]},
+{u:"calc", groups:[
+ {o:"c1", items:[["Terms","Percentage (parts per 100) · strength (solute amount, as %) · schedule (dose by weight) · solute (dissolved) · solvent (dissolves) · solution (homogeneous mix)"]]},
+ {o:"c2", items:[["% → mg/ml","Move the decimal 1 place right (×10): 0.5% = 5 mg/ml, 20% = 200 mg/ml. Reverse: 1 place left"]]},
+ {o:"c3", items:[["Setup","Have over 1 = want over x. lb ÷ 2.2 = kg; dose = mg/kg × kg. Diluent doesn’t change the dose. Surfactant: ml/kg × kg"]]},
+]},
 ];
+
 
 function renderGuide(){
   const cnt = o => Q.filter(q=>q.o===o).length;
@@ -1509,19 +1915,22 @@ function renderGuide(){
     <div class="row between"><h2 style="margin:0">Exam study guide</h2>
       <div class="row no-print"><button class="btn" data-act="guideAll">Expand all</button><button class="btn" data-act="print">Print</button></div></div>
     <p class="muted small" style="margin:8px 0 0">Organized by your learning objectives and built from the lecture slides (Goss). Tap a section to open it, then use <b>Practice this</b> to quiz just that objective.</p>
-    <div class="toc no-print">${GUIDE.map(g=>`<div><b>${g.title}</b><ol>${g.objs.map(x=>`<li><a href="#g-${x.o}" data-act="jump" data-k="${x.o}">${esc(x.h)}</a></li>`).join("")}</ol></div>`).join("")}</div>
+    <div class="toc no-print">${GUIDE.map(g=>`<div><b>${g.title}</b><ol>${g.objs.map(x=>`<li><a href="#g-${x.id||x.o}" data-act="jump" data-k="${x.id||x.o}">${esc(x.h)}</a></li>`).join("")}</ol></div>`).join("")}</div>
   </section>
-  <section class="card hy">
-    <h3>Highest-yield facts</h3>
-    ${T(["Topic","Know this"], HIGH_YIELD)}
+  <section class="card hy" id="g-hy">
+    <div class="row between"><h3 style="margin:0">Highest-yield facts by exam objective</h3></div>
+    <p class="muted small" style="margin:6px 0 0">Slide facts plus the textbook (marked <span class="tb">Textbook</span>). Where the two disagree, see “What doesn’t add up” at the bottom of the guide.</p>
+    ${HY.map(g=>`<details class="hyu" open><summary>${unitTag(g.u)} ${GUIDE.find(x=>x.u===g.u).title}</summary>
+      ${g.groups.map(gr=>`<h4 class="hyo">${esc(OBJ[gr.o].t)}</h4>${T(["Topic","Know this"], gr.items)}`).join("")}
+    </details>`).join("")}
   </section>
   ${GUIDE.map(g=>`
     <h2 class="unit-h">${unitTag(g.u)} ${g.title}</h2>
     ${g.objs.map((x,i)=>`
-      <details class="card gsec" id="g-${x.o}">
+      <details class="card gsec" id="g-${x.id||x.o}">
         <summary><span class="onum">${i+1}</span><span>${esc(x.h)}</span></summary>
         <div class="gbody">${x.body}
-          <div class="row end no-print" style="margin-top:14px"><button class="btn primary" data-act="practiceObj" data-k="${x.o}">Practice this · ${cnt(x.o)} questions</button></div>
+          ${(x.p||x.o) ? `<div class="row end no-print" style="margin-top:14px"><button class="btn primary" data-act="practiceObj" data-k="${x.p||x.o}">Practice this · ${cnt(x.p||x.o)} questions</button></div>` : ""}
         </div>
       </details>`).join("")}`).join("")}
   `;
